@@ -140,7 +140,7 @@ setup.addCaptions = (cuekey) =>  {
     track.mode = 'showing';
     const cues = {
      heroes: [[9.933,15.4,"Let me introduce you to Kharkiv, my city."],[15.466,16.933,"It's eclectic"],[16.958,21.121,"Just like Liverpool, it’s a centre for culture, science,"],[21.146,24.812,"education, philosophy and trade."],[24.837,29.145,"The streets are full of students from around the world."],[29.17,31.401,"Situated between Asia and Europe,"],[31.426,34.023,"you can see our transnational history"],[34.048,37.501,"carved out in the different architecture."],[37.546,42.367,"Here is where the first concrete skyscraper was built in the Soviet Union."],[42.392,45.723,"An amazing monument of constructivism,"],[45.659,50.167,"made from concrete and iron, using horses."],[50.192,55.856,"Kharkiv is only 40 kilometres from Russia and has become a city on the frontline."],[55.881,60.123,"From the first days, our busy streets, were targeted with rockets"],[60.148,62.501,"cluster and air bombs."],[62.568,66.024,"But just like concrete and iron are hard to destroy,"],[66.049,68.39,"our spirits are also unbreakable."],[68.41499999999999,71.812,"As each of us bravely questioned our responsibility."],[71.837,74.901,"Asking how can I help to win?"],[74.947,76.833,"To survive?"],[76.861,80.501,"And for a moment concerts were silent,"],[77,79,""],[80.526,83.545,"and Philharmonic Music Halls close their doors"],[83.57,87.723,"As musicians like Stas Kononov put down their instruments"],[87.748,91.10300000000001,"and became a frontline volunteer…"],[98.756,101.064,"STAS KONONOV: I was meant to play a concert in London"],[101.089,105.289,"on the 28th of February."],[105.314,107.789,"On the morning of the 24th"],[107.82300000000001,110.99000000000001,"a friend of mine, came knocking on my door, shouting"],[111.023,115.156,"‘wake up, or you will sleep through the war’."],[115.223,118.539,"For the next few days myself and other artists"],[118.564,121.94,"gathered in a small flat near the centre."],[121.965,124.123,"People were coming and going"],[124.173,126.273,"and we were trying to work out,"],[126.32300000000001,129.856,"should we stay or should we leave?"],[129.881,134.54,"I received a phone call from a friend in a more dangerous district,"],[134.565,139.148,"saying that there was a basement with 450 people."],[139.173,141.573,"That they didn’t have anything,"],[141.623,144.256,"no food, no water"],[144.281,147.498,"and its too dangerous to go outside."],[147.523,152.423,"It was the moment I realised that I must stay."],[152.448,156.80599999999998,"That there was a responsibility to provide and seek resources."],[156.83100000000002,159.475,"The flat I was in became a headquarters"],[159.5,163.923,"and everyone there if not actors, were connected to music, art, culture."],[163.948,167.323,"It was a little chaotic in that moment."],[167.348,170.323,"Someone provides something and its distributed"],[170.348,172.273,"to whoever most needs…"],[172.298,174.023,"Sharing everything…"],[174.048,177.323,"It was a very intense process."],[177.348,180.34,"After some time it became more organised"],[180.365,184.045,"and we had districts and volunteers in each area."],[184.09,186.203,"Of course it was dangerous."],[186.157,188.956,"Everywhere in Kharkiv was dangerous."],[188.981,191.49,"But I know a lot of examples of bravery"],[191.515,194.94,"and for me what I was doing is not brave."],[194.965,196.94,"It was stressful and frightening,"],[196.965,199.656,"it was a lots of things."],[199.681,202.431,"Everything makes you cry but inside"],[202.456,205.406,"but inside you have this feeling that you are in the right place,"],[205.431,209.123,"are part of something bigger than yourself,"],[209.148,213.406,"that we are all equal, all connected."],[213.43099999999998,218.59,"Everyone helps everyone and it doesn’t matter who you were before."],[218.615,221.80599999999998,"You could of been a businessman with a Tesla car"],[221.83100000000002,224.99,"or an artist who drives something very shitty."],[225.015,230.44,"Even the chief commander of the military base worked without hierarchy."],[230.465,232.95600000000002,"It was a horizontal connection…"],[232.981,234.70600000000002,"it was solidarity."],[233,234.707,""],[234.731,237.09,"You called someone if you needed something"],[237.115,238.95600000000002,"and you solved it."],[238.981,244.123,"It felt that one hundred people were one."],[244.148,247.323,"Before the full-scale invasion,"],[247.348,249.873,"I was asking these questions"],[249.898,251.59,"Who am I?"],[251.615,254.29,"What am I?"],[254.348,259.706,"This situation gave me the answers."],[263.21,268.16,"It feels like making music has not mattered for a long time."],[268.185,271.74,"A lot of musicians reject music right now."],[271.765,274.606,"To play, you must be in the moment,"],[274.631,277.79,"be present, to connect to your emotions."],[277.815,281.823,"It is very stressful and painful and when you start to play,"],[281.848,284.473,"you feel your pain and it comes in such a wave that"],[284.498,288.74,"you stop and think, never again."],[288.765,291.99,"We don’t have the space to be emotional."],[292.015,294.956,"So you go round in this circle."],[294.981,298.956,"And come back to the idea that it is not the time…"],[298.981,301.606,"maybe later."]], 
-      street2: [[10.2,13.866,"Musician Stas Kononov continues to volunteer,"],[13.891,17.266,"distributing supplies to civilians and soldiers."],[17.291,22.49,"It is on the frontline, he begins to play again - concerts for the army."],[22.515,26.856,"Acoustic sounds, songs from his album he is yet to release"],[26.881,30.589,"and music he recorded in a legendary studio in Izium"],[30.614,35.156,"that has now been completely destroyed…"],[35.17,36.17,""]]
+      justdoit: [[10.2,13.866,"Musician Stas Kononov continues to volunteer,"],[13.891,17.266,"distributing supplies to civilians and soldiers."],[17.291,22.49,"It is on the frontline, he begins to play again - concerts for the army."],[22.515,26.856,"Acoustic sounds, songs from his album he is yet to release"],[26.881,30.589,"and music he recorded in a legendary studio in Izium"],[30.614,35.156,"that has now been completely destroyed…"],[35.17,36.17,""]]
   }
     for (let i=0; i<cues[cuekey].length; i++){
     const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
@@ -331,7 +331,7 @@ setup.backThirty = () => {
 <footer class="ar">
   <div class="nav-wrapper">
     <div class="nav-item">
-    <div id="mount"> <span>Press the image</span> <span>to see it transform</span></div>
+    <div id="mount"> <span>Press the photo</span> <span>to see it transform</span></div>
     <<silently>>
 	<<repeat 10s>>
     <<timed 0.1s>>
@@ -520,7 +520,7 @@ You have two options:
 <<set $showForwards to true>>
 <<set $showBackwards to false>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.402712203909815, -2.9774930730282687,53.402712203909815, -2.9774930730282687)>>
+<<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40431288402048, -2.983863002232442)>>
 
 <div id="audio"></div>
 /* <<include "header">> */
@@ -581,7 +581,7 @@ You have two options:
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.402712203909815, -2.9774930730282687,53.402712203909815, -2.9774930730282687)>>
+<<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40431288402048, -2.983863002232442)>>
 <div id="audio"></div>
 <<include "header">>
 <div class="comp-warning">Best to experience on a phone</div>
@@ -756,14 +756,14 @@ But photography has the possibility to fuse both aspects, creating a historical 
 :: instnar3 [nobr]
 <<set $prevpass to "heroes">>
 <<set $passage to "instnar3">>
-<<set $nextpass to "instnar4">>
+<<set $nextpass to "AR1">>
 <<set $showMap to true>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.40264463190122, -2.9775098406789655,53.40445691350825, -2.983758768041164)>>
+<<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40431288402048, -2.983863002232442)>>
 <div id="audio"></div>
 
 <main class="instructions">
@@ -782,8 +782,55 @@ But photography has the possibility to fuse both aspects, creating a historical 
 </main>
 <<include "footer">>
 
-:: instnar4 [nobr]
+
+<main class="instructions">
+<div id="map" class="hide">$map</div>
+
+  <p>Let me show you some photos </p>
+  <p>Can you spot Castle Fine Arts? </p>
+  <p>Stand a few meters back from one of the big windows</p>
+  <p>Hold up your phone </p>
+    <<button "SHOW ME">><<goto $nextpass>><</button>>
+
+</main>
+<<include "footer">>
+
+
+:: AR1 [nobr]{"position":"450,50","size":"100,100"}
 <<set $prevpass to "instnar3">>
+<<set $passage to "AR1">>
+<<set $nextpass to "instnar4">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+/* <<include "header">> */
+<main>
+
+  <div class="ar-imgs-container one" id="ARContainer">
+    <div class="ar-img-wrapper touch bottom" id="initial" >
+      <img src="./assets/img/everyman-theatre.webp" class="">
+      </div>
+  </div >
+
+/* <p>(Liverpool Everyman Transforms into the volunteering at Lesya Ukrainka Theater)</p> */
+
+</main>
+<<include "footerAR">>
+<<done>><<set $s to setup.startup(["le15","le15"
+,"le17"
+,"le16"
+,"le14"
+,"le13"
+,"le11",
+"le12"])>><</done>>
+
+
+
+:: instnar4 [nobr]
+<<set $prevpass to "AR1">>
 <<set $passage to "instnar4">>
 <<set $nextpass to "journey1">>
 <<set $showMap to true>>
@@ -792,15 +839,14 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.40264463190122, -2.9775098406789655,53.40445691350825, -2.983758768041164)>>
+<<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40989439755692, -2.9803098599370768)>>
 <div id="audio"></div>
 
 <main class="instructions">
 <div id="map" class="hide">$map</div>
 
-<p>Ready to go to the contemporary arts centre Bluecoat?</p>
-<p>There are two entrances </p>
-<p>Head to the one off School Lane </p>
+<p>Ready to go to the St George’s Quarter?</p>
+<p>You want to arrive to the entrance at St John’s Garden</p>
 
   <<button "LET'S GO">><<goto $nextpass>><</button>>
 </main>
@@ -810,7 +856,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 :: journey1 [nobr]
 <<set $prevpass to "instnar4">>
 <<set $passage to "journey1">>
-<<set $nextpass to "street2">>
+<<set $nextpass to "justdoit">>
 <<set $showMap to true>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
@@ -819,26 +865,21 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showCaptionsIcon to false>>
 /* <<set $showAudio to true>> */
 /* Everyman to 1931  */
-<<set $map = setup.generateDirectionsMap(53.40264463190122, -2.9775098406789655,53.40445691350825, -2.983758768041164)>>
+<<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40989439755692, -2.9803098599370768)>>
 <main class="instructions">
 <div id="audio"></div>
 <div id="map" class="hide">$map</div>
 <p>The map will help guide you <<link [img[assets/img/map.png]]>><<toggleclass "#map" "hide">><</link>> to help you get there.</p>
 
-<p>As you begin to walk press <<button "Play">><<goto $nextpass>><</button>></p>
+<p>As you begin to walk press <<button "Play">><<goto $nextpass>> and listen to Just Do It <</button>></p>
 
 </main>
 
 <<include "footer">>
 
-
-
-
-
-
-:: street2[nobr]
+:: justdoit[nobr]
 <<set $prevpass to "journey1">>
-<<set $passage to "street2">>
+<<set $passage to "justdoit">>
 <<set $nextpass to "end">>
 <<set $showMap to true>>
 <<set $transcript to false>>
@@ -848,11 +889,11 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to true>>
 /* Everyman to 1931  */
-<<set $map = setup.generateDirectionsMap(53.40264463190122, -2.9775098406789655,53.40445691350825, -2.983758768041164)>>
+<<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40989439755692, -2.9803098599370768)>>
 <<include "headerstory">>
 <main class="story">
 <audio id="audio" autoplay>
-  <source src="https://www.dropbox.com/s/vobz1rqr6u0pcbf/04.%20THE%20STREETS%20PART%20TWO%20V1.mp3?raw=1">
+  <source src="https://www.dropbox.com/s/6nopcpng531b1t0/05.%20WALK%205%20JUST%20DO%20IT%20V1.mp3?raw=1">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 
@@ -876,36 +917,64 @@ But photography has the possibility to fuse both aspects, creating a historical 
 
 <<include "footerstory">>
 <<done>>
-  <<set $addC to setup.addCaptions("street2")>>
+  <<set $addC to setup.addCaptions("justdoit")>>
 <</done>>
 
 
-
-:: street2transcript
+:: justdoittranscript
 
 <h2>Transcript</h2>
 
-Russians target our infrastructure creating disasters.
-Imagine the street you are walking on now, without any electricity?
-Food in supermarkets or restaurants rots quickly without refrigeration. And for days there are no lights at home, in shop windows, from street lamps.
-You learn to keep your phone charged, and always carry a power bank and a torch.
-Passersby light up the pavements like fireflies.
-Total darkness in the city is dangerous. Hiding many obstacles and the unknown.
-But darkness also provokes a lot of light, and if you look above you, the stars are like big plums. 
-As months pass, each person becomes use to their new role and the teachers start lessons again, reminding their students…
-TEACHER: 
-When you hear popping sounds, don’t be afraid, these are not rockets. That is our air defence shooting down missiles. 
-When you hear firework sounds, these are rockets, move away from the windows and hide behind the walls. 
-When you hear whistling sounds, that is a plane. The plane carries bombs. Lie on the floor and cover your head. Open your mouth to avoid contusion.
-If the wound is deep, apply the pressure above the wound, write down the time of application and try to find a doctor.
-If you have a panic attack, don’t breathe deeply. Breathe in the package. Or hold your breath. 4 times 4. Wrap yourself in a blanket. Hug yourself tightly. Solve a maths problem. Don’t forget about your exams.
-Life is priceless. The war will end.
-Eat sweets to replenish calories.
-NARRATOR:
-By the middle of Spring, Lilacs start to blossom, and it’s impossible in the darkness to understand, if you are looking at an outpost covered with white netting or Lilac bushes blooming. If it is something beautiful or something connected to war. You can only tell if you smell it.
-Even though war is still ongoing, sandbags split as grass and flowers begin to grow out of them.
-Everything becomes mixed, absurd things with awful things all in one story.
-But despite how war has marked our cities, our greatest treasure, our people, persist. And musicians like cellist Karachevtsev Denys, go out on the streets to play amongst the rubble of the buildings...
+SERHIY ZAKHAROV:
+Of course, I was born an artist, this is what was given to me, and I cannot refuse. But I lived just an ordinary life, trying to find a chance to earn something, to spend something.
+I was the same swine as everyone else.
+Well, in Donetsk I lived in that context. We understood that we lived in a feudal, corrupt society and everyone looked for their own comfort zone. There was no feeling that anything needed to change. 
+But during the Maidan in 2014 I was amazed, because finally, something real was happening. People came out against this state machine, and no one gave any chance that it would not be a victory. 
+It inspired me a lot, and I realised that I wanted to be in the country that I lived.
+Then Donetsk became occupied by Russia and its proxies. There was no centralised power in the city. Just scattered gangs, each of which controlled a certain district.
+At first, I didn’t fully believe that this was permanent. But then, when I saw how things were developing, I understood that this was the end. 
+I had a self-realisation, that if I sit and do nothing, it will torment me for the rest of my life. 
+I gathered my friends and invited them to participate in creating street art. They refused because it was too dangerous. But one person, a professional photographer agreed to help.
+There was neither opportunity nor time to paint on the street walls.
+So I worked on plywood with the plan to place the finished works around the city.
+I created figures that mocked the self-proclaimed “Donetsk People's Republic” 
+Some images contained the literary character Sharikov a villain from Mikhail Bulgakov's novel. He was dressed in camouflage with the symbol of the so-called Novorossia (New Russia). There was the Russian military commander Igor Strelkov holding a gun to his head with the Nike catchphrase "Just Do It”.  An image of death with a grenade. There was also a clown.
+All the figures were of human height. Imitating a person at their full height. They looked like advertising boards.
+It was not something metaphorical, but a direct message.
+I walked around the city and choose places where they could be put. Where there were no surveillance cameras. 
+I planned, here I will park the car, 
+here I will go out through the yard, 
+here I will leave the artwork. 
+Planning where my friend will take a picture. 
+There was a curfew at night. So I decided that it should be in the morning, around five o’clock. 
+We drove around the city and placed two artworks. 
+As we drove to the next location, two militants told us to “Stop”. The curfew was still in place…
+They asked where we were going, and we said, to work. There were two more artworks in the boot. If they had looked inside, they would have killed us. 
+After that, I started putting one artwork at a time with breaks of several days or even weeks.
+They would stay up for a couple of hours and then be gone.
+I went around and watched the reaction. People laughed and took selfies. They wrote online saying it was a powerful signal that normal people still lived here. 
+In total I was kidnapped by militants for a month and a half.
+I was kept in basements.
+From the first interrogation, I already had broken ribs. And on day one, I experienced the first mock execution.
+On the second day, the scenario was the same. I thought that nothing could be worse. 
+Another guy was brought to the military headquarters. They stuffed us through the hatch into a military car, where it was impossible for two people to be. It was summer and it was very hot in this iron box. They had such methods of torture.
+Every day there were two mock executions. 
+The most terrible one was when we were picked up at night. They were drinking because one of them had a birthday. And he wanted to shoot a Ukrainian. 
+This battalion made money by getting prisoners to cut cars into metal, so they worked us as slaves.
+I was handcuffed to another person. It was very uncomfortable. My left hand was injured and so was the other guy’s. We were bound to each other as twin brothers. We had to pee and eat together.
+There was a car which they wanted to paint in camouflage. Someone mentioned that I’m an artist, so they said: “Paint it and we will let you go home.”
+I painted it, they gave me five hryvnias and clean clothes and I was free.
+But there was one problem, the Security Service had my passport. Without a passport you can’t go anywhere. So I went with my girlfriend and they said: “Who released you? Take him to the basement.” I stayed there for a month.
+This time there were no interrogations, no bullying. Our job was to dig trenches but my injuries made this impossible. 
+They took me to a place called “Liverpool Hotel” to work in the kitchen, saying “Guys, you’re going to heaven!” We were in a hotel room, we had a shower, and we worked in the kitchen peeling potatoes. I was able to ask for a phone and I contacted my girlfriend who worked in the security forces. She was given the number of some boss. 
+Well, such telephone numbers are not given out to strangers. There were no courts. Someone simply asked to release me and finally, they let me go.
+I stayed in occupied Donetsk for a while, until I realised that there was nothing there. All I had was 500 hryvnias and I went to Kyiv.
+In Kyiv the war seemed far away. 
+But on February 24th I woke up and went to the workshop. I looked at all the art and thought… none of this is important.
+I just had such a breakdown questioning, what have I been doing all my life? Only the art of killing Muscovites is needed. That’s it. Everything else is not art.
+I went to the military headquarters, it is an understandable reaction to these events.
+I was sent to territorial defence but there was a long queue. And it was here that I realized that what artists do is also important… and I went back to work. 
+
 
 
 
@@ -913,7 +982,7 @@ But despite how war has marked our cities, our greatest treasure, our people, pe
 
 
 :: end [nobr]
-<<set $prevpass to "street2">>
+<<set $prevpass to "justdoit">>
 <<set $passage to "end">>
 <<set $nextpass to "end">>
 <<set $showMap to false>>
@@ -923,7 +992,7 @@ But despite how war has marked our cities, our greatest treasure, our people, pe
 <<set $showForwards to false>>
 <<set $showCaptionsIcon to false>>
 /* Church  */
-<<set $map = setup.generateDirectionsMap(53.40449226592464, -2.9837506693977907,53.40449226592464, -2.9837506693977907)>>
+<<set $map = setup.generateDirectionsMap(53.40989439755692, -2.9803098599370768,53.40989439755692, -2.9803098599370768)>>
 <main class="end">
 <div id="audio"></div>
 <div id="map" class="hide">$map</div>
