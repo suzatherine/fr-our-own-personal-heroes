@@ -216,7 +216,7 @@ setup.backThirty = () => {
 
 :: headerstory [nobr]
 
-<header>
+<header class="story">
 <<if $showBackwards is true>>
   <div class="nav-wrapper">
     <div class="nav-item">
@@ -229,7 +229,10 @@ setup.backThirty = () => {
 <<if $showMap is true>>
     <div class="nav-wrapper">
       <div class="nav-item">
-    <<link [img[assets/img/map.png]]>><<toggleclass "#map" "hide">><</link>>
+    <<link [img[assets/img/map.png]]>>
+    <<toggleclass "#map" "hide">>
+    <<toggleclass "#poster" "hide">>
+    <</link>>
     </div>
   </div>
   <</if>>
@@ -242,7 +245,7 @@ setup.backThirty = () => {
   
   </div>
      <</if>>
-</header>
+</header> 
 
 
 :: footer [nobr]{"position":"100,375","size":"100,100"}
@@ -674,9 +677,9 @@ You have two options:
   <source src="https://www.dropbox.com/s/910rpedekxpxqfq/05.%20Our%20Own%20Personal%20Heroes%20V1.mp3?raw=1">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
-/* <div class="poster-wrapper" id="posterWrapper">
-   <img class="poster" src="./../assets/img/moon.jpeg"/>
- </div> */
+<div class="poster-wrapper" id="posterWrapper poster">
+   <img class="poster" src="./../assets/img/heroes.jpg"/>
+ </div>
   
 <div id="caption"></div>
 <div id="transcript"></div>
@@ -756,7 +759,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 :: instnar3 [nobr]
 <<set $prevpass to "heroes">>
 <<set $passage to "instnar3">>
-<<set $nextpass to "AR1">>
+<<set $nextpass to "instnar4">>
 <<set $showMap to true>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
@@ -783,6 +786,18 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<include "footer">>
 
 
+:: instnar4 [nobr]
+<<set $prevpass to "heroes">>
+<<set $passage to "instnar4">>
+<<set $nextpass to "AR1">>
+<<set $showMap to true>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40431288402048, -2.983863002232442)>>
+
 <main class="instructions">
 <div id="map" class="hide">$map</div>
 
@@ -797,9 +812,9 @@ But photography has the possibility to fuse both aspects, creating a historical 
 
 
 :: AR1 [nobr]{"position":"450,50","size":"100,100"}
-<<set $prevpass to "instnar3">>
+<<set $prevpass to "instnar4">>
 <<set $passage to "AR1">>
-<<set $nextpass to "instnar4">>
+<<set $nextpass to "instnar5">>
 <<set $showMap to false>>
 <<set $showAudio to false>>
 <<set $showReplay to true>>
@@ -829,9 +844,9 @@ But photography has the possibility to fuse both aspects, creating a historical 
 
 
 
-:: instnar4 [nobr]
+:: instnar5 [nobr]
 <<set $prevpass to "AR1">>
-<<set $passage to "instnar4">>
+<<set $passage to "instnar5">>
 <<set $nextpass to "journey1">>
 <<set $showMap to true>>
 <<set $showAudio to false>>
@@ -892,28 +907,41 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $map = setup.generateDirectionsMap(53.40431288402048, -2.983863002232442,53.40989439755692, -2.9803098599370768)>>
 <<include "headerstory">>
 <main class="story">
-<audio id="audio" autoplay>
+<audio id="audio">
   <source src="https://www.dropbox.com/s/6nopcpng531b1t0/05.%20WALK%205%20JUST%20DO%20IT%20V1.mp3?raw=1">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 
-<div id="map" class="hide">$map</div>
-/* <div class="poster-wrapper">
-   <img class="poster" src="./../assets/img/moon.jpeg"/>
- </div> */
+<div id="map" >$map</div>
+<div class="poster-wrapper hide" id="poster">
+   <img class="poster" src="./../assets/img/heroes.jpg"/>
+ </div>
 <div id="caption" ></div>
 <div id="transcript"></div>
-<div id="mount" ></div>
+<div id="mount"  ><p class="comment"> To listen press <div class="inline-btn-wrapper">
+<<link "play">>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>></div></p></div>
 
-<<timed 6s>>
-  <<addclass "#forIcon" "circle">>
-   <<addclass "#forIcon" "pulse">>
-/* <<replace "#mount">>
-<p class="comment"> When you're finished listening, let me know</p>
-<<button "I'm finished">><<goto $nextpass>><</button>>
- <</replace>> */
+
+<<timed 15s>>
+  /* <<addclass "#forIcon" "circle">>
+   <<addclass "#forIcon" "pulse">> */
+<<replace "#mount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+
+ <</replace>>
  <</timed>>
 </main>
+
 
 <<include "footerstory">>
 <<done>>
@@ -997,12 +1025,12 @@ I was sent to territorial defence but there was a long queue. And it was here th
 <div id="audio"></div>
 <div id="map" class="hide">$map</div>
 <div id="mount"></div>
-<h2>Liverpool Philharmonic</h2>
+<h2>St. Georges Square</h2>
 <p>Would you like to go on another journey?</p>
 <br/>
- <h3>Spirits from Concrete & Iron</h3>
+ <h3>Investigation Ground</h3>
  <br/>
-    <a href="https://fr-spirits-concrete-iron.netlify.app/">
+    <a href="https://liv-ukr-main.netlify.app/">
 <button>Start</button></a>
 
 

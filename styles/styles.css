@@ -16,7 +16,7 @@
   --color-orange: #f75146;
   --font-headings: "Shippori Antique B1", sans-serif;
   --font-body: "Shippori Antique B1", sans-serif;
-  --padding: 2rem;
+  --padding: 1.5rem;
 }
 
 /* GET RID OF TWINE STYLES */
@@ -106,8 +106,8 @@ h4 {
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: var(--padding);
 }
 
@@ -116,7 +116,7 @@ header {
 }
 
 .header-item > h3.subtitle {
-  text-align: right;
+  text-align: center;
   font-size: 1.5rem;
   font-family: var(--font-body);
 }
@@ -178,7 +178,7 @@ nav {
 }
 
 .nav-item > a > img {
-  width: 30px;
+  width: 25px;
 }
 
 .nav-item:last-child {
@@ -273,7 +273,7 @@ textarea {
   margin: auto;
 }
 
-.directions-card {
+.gm-style .directions-card {
   display: none !important;
 }
 
@@ -320,13 +320,14 @@ header.credits > .header-item > h3 {
 main.instructions {
   justify-content: flex-start;
 }
+
 main.instructions > h2 {
   margin-block-end: 3rem;
 }
 
 main.instructions > #mount > p > .link-image > img,
 main.instructions > p > .link-image > img {
-  width: 30px;
+  width: 25px;
   margin: 0 10px;
 }
 
@@ -481,6 +482,12 @@ footer.ar > .nav-wrapper > .nav-item > #mount > span {
 
 /* STORY  */
 
+header.story {
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+}
+
 main.story {
   justify-content: flex-start;
   gap: 1.5rem;
@@ -498,7 +505,7 @@ main.story > #mount > p.comment {
 }
 
 footer > .nav-wrapper.playpause-wrapper {
-  width: 30px;
+  width: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,7 +518,6 @@ footer > .nav-wrapper.playpause-wrapper {
 main.story > .poster-wrapper {
   width: 95%;
   margin: 0 auto;
-  margin-top: -3rem;
   z-index: -999;
 }
 
@@ -522,8 +528,7 @@ main.story > .poster-wrapper.small {
 
 main.story > #caption {
   z-index: 9999;
-  color: #000000;
-  background: aliceblue;
+  color: #ffffff;
   margin-block-start: -3rem;
   padding: 0.5rem;
 }
