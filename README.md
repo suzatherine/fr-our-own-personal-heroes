@@ -1,7 +1,6 @@
-# fr-our-own-personal-heroes
+#Our Biggest Premiere Yet
 
-need to add audio to lofi ar
+https://fr-biggest-premiere-yet.netlify.app/
 
-still needs captions
-
-no images yet for lofi AR
+add captions
+fix maps

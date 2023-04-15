@@ -213,6 +213,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .menu-wrapper > button {
@@ -320,13 +321,13 @@ header.credits > .header-item > h3 {
 main.instructions {
   justify-content: flex-start;
 }
-
 main.instructions > h2 {
   margin-block-end: 3rem;
 }
 
 main.instructions > #mount > p > .link-image > img,
-main.instructions > p > .link-image > img {
+main.instructions > p > .link-image > img,
+main.story > #mount > p > .link-image > img {
   width: 25px;
   margin: 0 10px;
 }
@@ -368,6 +369,10 @@ main.end {
 
 /* LOFI AR */
 
+main.ar {
+  justify-content: flex-start;
+}
+
 .ar-option-wrapper {
   display: flex;
   flex-direction: column;
@@ -382,19 +387,18 @@ main.end {
 .ar-imgs-container {
   position: relative;
   width: 100%;
-  height: 50vh;
-  background-size: cover;
+  max-height: 50vh;
 }
 
-.ar-imgs-container.one {
+/* .ar-imgs-container.one {
   background-image: url("./../assets/img/le15.jpeg");
-}
+} */
 
 .ar-img-wrapper,
 .hidden-img-wrapper {
-  height: 50vh;
+  max-height: 50vh;
   object-fit: cover;
-  /* position: absolute; */
+  position: absolute;
   left: 0;
   -webkit-transition: opacity 2s ease-in-out;
   -moz-transition: opacity 2s ease-in-out;
@@ -405,7 +409,7 @@ main.end {
 .ar-img-wrapper > img,
 .hidden-img-wrapper > img,
 .static-img-wrapper > img {
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
 }
 
@@ -414,26 +418,6 @@ main.end {
 .static-img-wrapper.transparent {
   opacity: 0;
   /* height: 0; */
-}
-
-.ar-img-wrapper.hover:hover {
-  filter: grayscale(100%);
-}
-
-.ar-img-wrapper.active:active {
-  filter: grayscale(100%);
-}
-
-.ar-img-wrapper.focus:focus {
-  filter: grayscale(100%);
-}
-
-.ar-img-wrapper.touch {
-  filter: grayscale(0%);
-}
-
-.ar-img-wrapper.touch.filter {
-  filter: grayscale(100%);
 }
 
 #log {
@@ -445,6 +429,7 @@ main.end {
 footer.ar > .nav-wrapper > .nav-item > #mount > span {
   display: block;
   font-size: 1.4rem;
+  text-align: center;
 }
 
 @media screen and (min-width: 450px) {
@@ -495,13 +480,18 @@ main.story {
   padding-top: 0;
 }
 
-main.story > #mount > p.comment {
+main.story > #mount > p.comment,
+.nav-item > #mount > span.comment {
   background-color: var(--accent-color-secondary);
   padding: 6px 8px;
   border-radius: 10px;
   border: black 0.5px solid;
   color: black;
   width: fit-content;
+}
+
+main.story.captions {
+  justify-content: center;
 }
 
 footer > .nav-wrapper.playpause-wrapper {
@@ -518,6 +508,7 @@ footer > .nav-wrapper.playpause-wrapper {
 main.story > .poster-wrapper {
   width: 95%;
   margin: 0 auto;
+
   z-index: -999;
 }
 
@@ -528,8 +519,8 @@ main.story > .poster-wrapper.small {
 
 main.story > #caption {
   z-index: 9999;
-  color: #ffffff;
-  margin-block-start: -3rem;
+  color: #ffff;
+
   padding: 0.5rem;
 }
 
@@ -543,7 +534,7 @@ main.story > .mount > p {
   display: none;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
   main {
     display: none !important;
   }
