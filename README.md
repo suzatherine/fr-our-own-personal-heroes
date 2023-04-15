@@ -1,5 +1,5 @@
-#Our Biggest Premiere Yet
+#Our own personal Heroes
 
 add captions
-fix maps
+final map route may need correcting
 lofi AR images not found yet
