@@ -233,7 +233,17 @@ setup.backThirty = () => {
 
 
 :: StoryInit {"position":"100,100","size":"100,100"}
-<<cacheaudio "premiere" "https://remote.co.com/MoTT/AgentTraining/Sounds/13.%20Challenge%203%20-%202.mp3">>
+<<cacheaudio "27" "./../assets/audio/27.mp3">>
+<<cacheaudio "28" "./../assets/audio/28.mp3">>
+<<cacheaudio "29" "./../assets/audio/29.mp3">>
+<<cacheaudio "30" "./../assets/audio/30.mp3">>
+<<cacheaudio "31" "./../assets/audio/31.mp3">>
+<<cacheaudio "32.5" "./../assets/audio/32.5.mp3">>
+<<cacheaudio "32" "./../assets/audio/32.mp3">>
+<<cacheaudio "33.5" "./../assets/audio/33.5.mp3">>
+<<cacheaudio "33" "./../assets/audio/33.mp3">>
+<<cacheaudio "34" "./../assets/audio/34.mp3">>
+
 <<waitforaudio>>
 
 
@@ -388,7 +398,7 @@ setup.backThirty = () => {
  
   <div class="nav-wrapper">
     <div class="nav-item">
-    <div id="mount"> <span class="comment">Press the image <br> to see it transform</span></div>
+    <div id="mount"> <span class="comment">Press the photo <br> to see it transform</span></div>
     </div></div>
     <div class="nav-wrapper">
     <div class="nav-item">
@@ -657,6 +667,7 @@ setup.backThirty = () => {
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $map = setup.generateViewMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"})>>
+<<audio ":all" stop>><<audio "27" play>>
 <div id="audio"></div>
 <<include "header">>
 <div class="comp-warning">Best to experience on a phone</div>
@@ -686,6 +697,7 @@ setup.backThirty = () => {
 <main class="instructions">
 <div id="map" class="hide">$map</div>
   <<if $openOrClosed is "open">>
+  <<audio ":all" stop>><<audio "28" play>>
   <p>Go straight through the gates and across the courtyard</p>
   <p>Enter the building, walk through the cafe and out to the garden</p>
   <p>You should be able to spot our artwork amongst the flowers</p>
@@ -695,6 +707,7 @@ setup.backThirty = () => {
 
 
   <<if $openOrClosed is "closed">>
+  <<audio ":all" stop>><<audio "31" play>>
   <p>Find a place to make yourself comfortable</p>
   <p>Facing the museum building </p>
   <p>Maybe lean against one of the large trees </p>
@@ -720,6 +733,7 @@ setup.backThirty = () => {
 <<set $showCaptionsIcon to true>>
 <<set $showMap to false>>
 <<set $transcriptname to  "heroestranscript">>
+<<audio ":all" stop>><<audio "29" play>>
 <<include "headerstory">>
 <main class="story" id="storyContainer">
 <audio id="audio" >
@@ -814,7 +828,8 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <main class="instructions">
 <div id="map" class="hide">$map</div>
 <<if $openOrClosed is "open">>
-  <p>Before you leave, you might want to see <em>Dialogues</em>, an exhibition by Ukrainian artist Alevtina Kakhidze</p>
+<<audio ":all" stop>><<audio "30" play>>
+  <p>Before you leave, you might want to see the exhibition <em>Dialogues</em> by Ukrainian artist Alevtina Kakhidze</p>
   <p>When you are ready, leave Bluecoat the same way you came</p>
   <p>Finding the gates at the entrance</p>
     <<button "I'm here">><<goto $nextpass>><</button>>
@@ -838,6 +853,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $map = setup.generateDirectionsMap(53.4030572538972, -2.969504715141457,53.4030572538972, -2.969504715141457)>>
+<<audio ":all" stop>><<audio "32" play>>
 <div id="audio"></div>
 
 <main class="instructions">
@@ -863,6 +879,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
+<<audio ":all" stop>><<audio "32.5" play>>
 /* <<include "header">> */
 /* OPEN */
 <main class="ar">
@@ -893,7 +910,9 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"Central Library")>>
+<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St John's Garden")>>
+
+<<audio ":all" stop>><<audio "33" play>>
 <div id="audio"></div>
 
 <main class="instructions">
@@ -922,6 +941,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $transcriptname to  "justdoittranscript">>
 /* Everyman to 1931  */
 <<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"Central Library")>>
+
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
@@ -937,15 +957,18 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <div id="transcript"></div>
 <div id="mount"></div>
 
+
 <<timed 1s>>
+<<audio ":all" stop>><<audio "33.5" play>>
   <<replace "#mount">>  
-<p class="comment">You can use the map <<link [img[assets/img/map.png]]>><</link>> to help you get there</p>
+<p class="comment">The map <<link [img[assets/img/map.png]]>><</link>> will help guide you</p>
 <</replace>>
  <</timed>>
 
  <<timed 6s>>
+ <<audio ":all" stop>><<audio "34" play>>
   <<replace "#mount">>  
-<p class="comment">As you begin to walk press  <div class="inline-btn-wrapper">
+<p class="comment">As you begin to walk press <div class="inline-btn-wrapper">
 <<link "play">>
       <<replace "#mount">>
     <p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
@@ -1035,8 +1058,9 @@ I was sent to territorial defence but there was a long queue. And it was here th
 <<set $showBackwards to true>>
 <<set $showForwards to false>>
 <<set $showCaptionsIcon to false>>
+<<audio ":all" stop>>
 /* Church  */
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"Central Library")>>
+<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St John's Garden")>>
 <main class="end">
 <div id="audio"></div>
 <div id="map" class="hide">$map</div>
