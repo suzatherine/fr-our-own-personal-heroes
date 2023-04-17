@@ -910,7 +910,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St John's Garden")>>
+<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St Georges Quarter Liverpool")>>
 
 <<audio ":all" stop>><<audio "33" play>>
 <div id="audio"></div>
@@ -940,7 +940,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showCaptionsIcon to true>>
 <<set $transcriptname to  "justdoittranscript">>
 /* Everyman to 1931  */
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"Central Library")>>
+<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St Georges Quarter Liverpool")>>
 
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
@@ -1060,7 +1060,7 @@ I was sent to territorial defence but there was a long queue. And it was here th
 <<set $showCaptionsIcon to false>>
 <<audio ":all" stop>>
 /* Church  */
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St John's Garden")>>
+<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St Georges Quarter Liverpool")>>
 <main class="end">
 <div id="audio"></div>
 <div id="map" class="hide">$map</div>
