@@ -306,7 +306,7 @@ setup.backThirty = () => {
   <<if $sendOn is true>>
  <div class="nav-wrapper" id="forIcon">
     <div class="nav-item " >
-        <a href="https://fr-spirits-concrete-iron.netlify.app/">
+        <a href="https://fr-war-of-words.netlify.app/">
 <img src="assets/img/for.png"></a>
     </div>
   </div>
@@ -671,7 +671,7 @@ setup.backThirty = () => {
 <main class="beginning" id="">
 
 <div class="poster-wrapper" id="poster">
-   <img class="poster" src="./../assets/img/heroes.jpeg"/>
+   <img class="poster" src="./../assets/img/heroes-title.jpeg"/>
  </div>
  <p class="comment center">Put your headphones in and turn up the volume</p>
  <div class="menu-wrapper">
@@ -1199,7 +1199,7 @@ Here you can see photos from across the many different generations, including fr
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St Georges Quarter Liverpool")>>
+<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat Liverpool School Lane"},"St Georges Quarter Liverpool, St Johns Garden")>>
 
 <<audio ":all" stop>><<audio "33" play>>
 <div id="audio"></div>
@@ -1209,6 +1209,7 @@ Here you can see photos from across the many different generations, including fr
 <p>Ready to go to the St George’s Quarter?</p>
 <p>You want to arrive to the entrance at St John’s Garden</p>
 <div class="caution" ><img src="assets/img/stepfree.png"><p>Go around St John's Garden to the entrance on opposite side</p></div>
+<br/>
   <<button "Let's go">><<goto $nextpass>><</button>>
 </main>
 <<include "footer">>
@@ -1227,40 +1228,62 @@ Here you can see photos from across the many different generations, including fr
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to true>>
-<<set $sendOn to false>>
+<<set $sendOn to true>>
 <<set $transcriptname to  "justdoittranscript">>
 /* Everyman to 1931  */
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St Georges Quarter Liverpool")>>
-
+<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat Liverpool School Lane"},"St Georges Quarter Liverpool, St Johns Garden")>>
+<<audio ":all" stop>><<audio "33.5" play>>
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
-  <source src="https://withfireandrageliverpool.com/audio/PH/heroesv2.mp3">
+  <source src="https://withfireandrageliverpool.com/audio/PH/heroesstreetsserv2.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 
 <div id="map" class="">$map</div>
 
+<div class="caution" ><img src="assets/img/caution.png"><p>Take care crossing roads </p></div>
 <div id="transcript"></div>
 <div id="mount"></div>
-<<timed 0.1s>><<replace "#headerinstmount">><p class="comment"> To listen to <em>$title</em> press <div class="inline-btn-wrapper">
+
+
+
+ <<timed 0.2s>>
+  <<replace "#headerinstmount">>  
+<p class="comment">The map will help guide you</p>
+<</replace>>
+ <</timed>>
+
+ <<timed 6s>>
+  <<replace "#headerinstmount">>  
+<p class="comment">As you begin to walk press  <div class="inline-btn-wrapper">
 <<link "play">>
+  <<timed 4s>>
+      <<replace "#headerinstmount">>
+    <p class="comment"> Are you outside the Liverpool Philharmonic?  
+    <a href="https://fr-war-of-words.netlify.app/">
+<button>I'm here</button></a>
+    </p>
+    <</replace>>
+   <</timed>>
         <<if $playToggle is false>>
       <<set $fn to setup.play()>>
       <<set $playToggle to true>>
       <<addclass "#playpause" "playhighlight">>
       <</if>>
-<<replace "#headerinstmount">>
-<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
- <</replace>>
- <</link>>
-  </div></p>
- <</replace>><</timed>>
 
- <<timed 30s>>
- <<replace "#headerinstmount">>
-<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
- <</replace>>
+      <</link>>
+      </div></p>
+      <</replace>>
+ <</timed>>
+
+  <<timed 30s>>
+<<replace "#headerinstmount">>
+    <p class="comment"> Are you outside the Liverpool Philharmonic?  
+    <a href="https://fr-war-of-words.netlify.app/">
+<button>I'm here</button></a>
+    </p>
+    <</replace>>
 
  <</timed>>
 
@@ -1325,36 +1348,6 @@ I just had such a breakdown questioning, what have I been doing all my life? Onl
 I went to the military headquarters, it is an understandable reaction to these events.
 I was sent to territorial defence but there was a long queue. And it was here that I realized that what artists do is also important… and I went back to work. 
 
-
-
-:: end [nobr]
-<<set $prevpass to "justdoit">>
-<<set $passage to "end">>
-<<set $nextpass to "end">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to true>>
-<<set $showBackwards to true>>
-<<set $showForwards to false>>
-<<set $showCaptionsIcon to false>>
-<<audio ":all" stop>>
-/* Church  */
-<<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St Georges Quarter Liverpool")>>
-<main class="end">
-<div id="audio"></div>
-<div id="map" class="hide">$map</div>
-<div id="mount"></div>
-<h2>St Georges Square</h2>
-<p>Would you like to go on another journey?</p>
-<br/>
- <h3>Investigation Ground</h3>
- <br/>
-    <a href="https://fr-investigation-zone.netlify.app/">
-<button>Start</button></a>
-
-/* <p>Or back to the main <a href="https://liv-ukr-main.netlify.app/map">map</a></p> */
-</main>
-<<include "footer">>
 
 
 
