@@ -166,31 +166,7 @@ function log(msg) {
 
 // document.addEventListener("DOMContentLoaded", startup);
 
-// CAPTIONS
-setup.addCaptions = (cuekey) =>  {
-    const audio = document.getElementById("audio");
-     const track = audio.addTextTrack('subtitles', 'English', 'en');
-    track.mode = 'showing';
-    const cues = {
-      heroes: [[0.015,8.135,"[audio playing...]"],[8.16,10.71,"across the ages, there has always been"],[10.71,13.68,"Russian colonialism, censorship, and"],[13.68,17.04,"attempts to erase our culture. Imagine"],[17.04,19.41,"losing the arts and artifacts that"],[19.41,22.955,"represents your history, your identity"],[22.98,25.265,"in museums in Houston and Mariupol,"],[25.29,27.48,"there are now empty rooms where Russians"],[27.48,30.125,"have taken everything."],[30.15,31.98,"How would you feel to have another"],[31.98,34.83,"country so your heritage on the two"],[34.83,38.1,"houses in their own museums and DeRuyter"],[38.1,39.815,"history?"],[39.84,42.425,"Two weeks into the full scale invasion,"],[42.45,44.61,"Iraqis hit the ivantage historical and"],[44.61,46.955,"Local History Museum."],[46.98,49.5,"Insights was the works of Maria prima"],[49.5,52.53,"chenko. A world renowned artists could"],[52.53,55.26,"you incarnate with natural pigments. The"],[55.26,58.865,"museum run totally on fire. Totally."],[58.89,61.38,"Some people from the village with just"],[61.38,63.93,"their bare hands tried to rescue her"],[63.93,67.445,"works. It was a total shock."],[67.47,69.84,"I began calling different people asking"],[69.87,71.67,"if they need help to preserve our"],[71.67,74.7,"cultural heritage. This is how I came"],[74.7,77.135,"into contact with Alessandro, such"],[77.16,79.14,"researcher and curator of the factor"],[79.14,80.03999999999999,"School of photography."],[80.065,97.595,"[audio playing...]"],[97.62,100.25999999999999,"The whole of January was full of this"],[100.47,103.28999999999999,"pre escalation tension. And I had been"],[103.28999999999999,105.03,"talking with Surya libertines key the"],[105.03,106.97999999999999,"director of the Museum of Harkey School"],[106.97999999999999,109.41,"of photography, about how we should"],[109.41,112.715,"prepare our collections for evacuation."],[112.74000000000001,115.02000000000001,"We have amazing photography archives."],[115.38,117.18,"They are not just Ukrainian heritage,"],[117.18,119.91,"but world heritage. The core of the"],[119.91,122.31,"collection is the artwork of Harkey"],[122.31,124.56,"School of photography. It wasn't an"],[124.56,127.2,"institution but an informal community of"],[127.2,129.42,"three generations of like minded"],[129.45,131.375,"artists."],[131.4,134.04,"It emerged in the late 1960s and"],[134.04,136.32,"included top level photographers like"],[136.32,138.99,"Barry's Mihaylova and his friends. If"],[138.99,141.6,"any Pavlov Victor Cogito for a month at"],[141.6,143.91,"golf course and his salon skin, others"],[144.06,147.12,"whose work in the 60s 70s and 80s"],[147.39,149.61,"expanded the borders of the medium and"],[149.61,151.98,"demonstrated how it can overcome"],[151.98,153.87,"censorship, trying to get through the"],[153.87,158.645,"muteness of late Soviet epoch."],[158.67000000000002,160.89,"On the one hand, what they were doing"],[160.89,163.5,"was really resistance. But on the other"],[163.5,166.59,"hand, it was not manifested or obvious."],[166.95,169.14,"These photographers saw their practice"],[169.14,171.63,"as a tool to carve out an alternative"],[171.63,174.45,"space. Before the collapse of the USSR,"],[174.45,176.28,"they had few chances to present their"],[176.28,179.55,"works in public. For instance, the first"],[179.55,181.89,"generation the so called Lima group,"],[182.04,183.84,"which is translated as time from"],[183.84,186.27,"Russian, had only one exhibition"],[186.27,187.89,"throughout the whole history of the"],[187.89,189.57,"group, which is said to be closed in a"],[189.57,192.575,"couple of hours after opening."],[192.6,195.21,"So they chose to create an inner circle"],[195.21,197.61,"of photographers, who were thinking the"],[197.61,199.74,"same way, sharing the thoughts and"],[199.74,202.77,"ideas. The photos from this generation"],[202.77,205.14,"hold the phenomenon and history of this"],[205.14,209.075,"society, their relationships and bonds."],[209.1,211.95,"Preserving this archives was what began"],[211.95,213.66,"the Harkey School of photography and has"],[213.66,216.54,"become a space to unite researchers and"],[216.66,218.88,"spotlights Ukrainian photographers from"],[218.958,222.185,"across the decades until now."],[222.21,224.7,"When the full scale invasion began, I"],[224.7,227.52,"had it to the west, because the priority"],[227.52,230.615,"was the life of my family."],[230.64,232.8,"For a week, I was just in a complete"],[232.8,236.28,"state of Anna BIOSIS. We were all numb"],[236.28,240.15,"and frozen. Just watching what was going"],[240.15,242.405,"on."],[242.43,244.68,"Then I received a message from Veronica"],[244.74,246.39,"that people were working to secure the"],[246.42,249.485,"archives."],[249.51,252.54,"It was a wake up call that I was more or"],[252.54,254.91,"less safe and now must take care of what"],[254.91,256.385,"we can."],[256.41,258.42,"We started talking quietly to people who"],[258.42,261.33,"had chosen to stay in hockey. Those were"],[261.33,264.48,"John broker and CO Alexey of poker zone"],[264.48,266.55,"has a horrible love this love customers"],[266.55,269.165,"choke and Alexander from them."],[269.19,271.71,"We tried not to bring any attention to"],[271.71,273.84000000000003,"where the archives were located and what"],[273.84000000000003,275.975,"we were doing."],[276,278.1,"volunteers gathered at the museum and"],[278.1,280.77,"held back everything up. They also went"],[280.77,282.3,"to other photographers and took their"],[282.3,285.24,"private archives. And for a moment, the"],[285.24,287.46,"museum turned into a spot to bring all"],[287.46,289.71,"cultural stuff from around the city and"],[289.71,293.37,"transported. I cannot even imagine what"],[293.37,295.77,"level of courage you need to think about"],[295.8,298.265,"art in this moment."],[298.29,299.97,"In a situation of complete danger"],[300,304.99,"People have different reactions, fight,"],[305.015,307.115,"freeze, or flight."],[307.14,309.69,"These volunteers decided to completely"],[309.72,312.87,"on biological reaction, they chose to"],[312.87,315.215,"fight."],[315.24,318.09,"They were incredibly brave. We own them"],[318.09,320.885,"the whole security of the museum."],[320.91,326.255,"They are our own personal heroes."],[326.28,328.59,"Now I feel that not only photography but"],[328.62,330.78,"art in general in Ukraine is in a very"],[330.78,332.825,"tricky position."],[332.85,335.07,"When you see all these photos of ruined"],[335.07,338.825,"buildings of wounded and killed people,"],[338.85,341.55,"you start asking yourself, What is this"],[341.55,344.045,"for?"],[344.07,346.65,"In these days of such extensive media"],[346.65,351.365,"coverage, it risks losing weight."],[351.39,353.31,"It is a huge challenge for our"],[353.31,355.8,"photographers to find this language that"],[355.8,357.42,"will manage to make people stop"],[357.42,361.5,"scrolling and pause. That will give some"],[361.5,364.055,"meaningful narration"],[364.08,366.69,"but photography has the possibility to"],[366.75,370.65,"use both aspects, creating a historical"],[370.65,373.62,"document and adding an individual touch"],[373.62,375.695,"to the message."],[375.72,378.09,"And I believe this is the role of"],[378.09,379.999,"photography now."],[380.024,399.523,""]], 
-      justdoit: [[0.015,5.645,"[audio playing...]"],[5.67,9.27,"Of course, I was born an artist. This is"],[9.27,11.34,"what was given to me and I cannot"],[11.34,14.52,"refuse. But I live with just an ordinary"],[14.52,17.55,"life trying to find the chance to earn"],[17.55,21.57,"something, to spend some. I was the same"],[21.57,25.98,"swine as everyone else. Well, in"],[25.98,29.16,"Donetsk, I lived in that context. We"],[29.16,31.26,"understood that we lived in Feudal,"],[31.26,34.41,"corrupted sociology. And everyone looked"],[34.41,37.92,"for the own comfort zone. There was no"],[37.92,42.185,"feeling that anything needed to change."],[42.21,46.68,"But during the mind down in 2014, I was"],[46.68,50.16,"amazed. Because finally, something real"],[50.16,54.33,"was happening. People came out against"],[54.33,56.94,"the state machine, and no one gave any"],[56.94,61.325,"chance that it would not be a victory."],[61.35,64.74,"It inspired me a lot. And I realized, so"],[64.74,67.11,"they wanted to be in the country, so"],[67.11,71.28,"they leave them don't yet became"],[71.55,75.69,"occupied by rush, and its proxies. There"],[75.69,79.05,"was no centralized power in the city,"],[79.26,82.08,"just scattered gangs, each of which"],[82.08,86.25,"control the sorting district. At first,"],[86.49,89.13,"I didn't fully believe that this was"],[89.25,92.55,"permanent. But then, when I saw how"],[92.55,95.555,"things were developing, I understood"],[95.58,100.47,"that this was there. I had the self"],[100.47,104.13,"realization that if I see it and do"],[104.13,106.71000000000001,"nothing, it will torment me for the rest"],[106.71000000000001,110.75999999999999,"of my life. I guess that my friends and"],[110.75999999999999,113.31,"invited them to participate in creating"],[113.31,117.515,"street art. They refused, because it was"],[117.53999999999999,121.41,"too dangerous. But one person, a"],[121.41,123.66,"professional photographer agreed to"],[123.66,127.29,"help. There was neither opportunity not"],[127.32,131.52,"time to paint on the street. So I worked"],[131.52,134.91,"on plywood with the plan to place the"],[134.91,138.57,"finish it works around the city. I"],[138.57,141.78,"agreed to see goods that marked the self"],[141.78,145.20499999999998,"proclaimed Donetsk People's Republic."],[145.23,147.72,"Some images contain is the literary"],[147.72,150.54,"character sharekhan. Everyone from"],[150.54,153.93,"Mikhail Bulgakov novel, he was dressed"],[154.11,156.84,"in camouflage with a symbol of the so"],[156.84,160.8,"called novel Ross, new rush. There was"],[160.8,163.11,"the Russian military commander, he goes"],[163.11,165.96,"through cold holding a gun to his head"],[166.29,170.91,"with the Nike catchphrase, just do an"],[170.91,175.11,"image of death with a grenade. There was"],[175.11,179.49,"also a cloud. All the figures were of"],[179.49,183.3,"human height, imitating aerial persons"],[183.33,187.865,"size, they look like advertising boards."],[187.89,190.8,"It was not something metaphorical, but a"],[190.8,196.74,"direct message. I walked around the city"],[196.77,199.26,"and choose places where they could be"],[199.26,202.07999999999998,"placed. Whether there were no"],[202.07999999999998,206.43,"surveillance cameras, I planned here. I"],[206.43,209.82,"will park the car here. I will go out"],[209.82,213.36,"through the yard. Here. I will leave the"],[213.36,217.92000000000002,"art when where my friend will take a"],[217.92000000000002,221.97,"picture. There was a curfew at night. So"],[221.97,224.13,"I decided that it should be in the"],[224.13,228,"morning at around five o'clock. On the"],[228,230.79,"first day, we drove around the city and"],[230.79,234.3,"placed two artworks. As we drove to the"],[234.3,237.32999999999998,"next location, two militants told us to"],[237.32999999999998,242.195,"stop the car who was still in place."],[242.22,245.07,"They asked where we were going. And we"],[245.07,248.67,"said two more. There were two more"],[248.73,251.7,"artworks in the booth. If they had"],[251.7,254.52,"looked inside, they would have killed"],[254.52,259.05,"us. After that, I started putting one"],[259.08,261.51,"artwork at a time with a break of"],[261.51,266.04,"several days or even weeks. They would"],[266.04,269.28,"stay up for a couple of hours and then"],[269.28,273.72,"be gone. I went around and watching the"],[273.72,276.99,"reaction. People laughed and took"],[276.99,280.38,"selfies. They wrote on wine saying it"],[280.38,283.8,"was a powerful signal that normal people"],[284.07,300.845,"still live here."],[300.87,303.54,"In total, I was kidnapped by militants"],[303.6,307.32,"for a month and how I was kept in"],[307.32,311.615,"basements. From the first interrogation,"],[311.64,314.79,"I already had broken ribs. And on day"],[314.79,318.36,"one, I experienced the first mock"],[318.42,321.75,"execution. On the second day, the"],[321.75,325.05,"scenario was the same. I thought that"],[325.05,328.98,"nothing could be worse. But then they"],[328.98,331.62,"bought another prisoner to the military"],[331.62,335.01,"headquarters. They stuffed us through"],[335.01,337.53,"the hedge into a military car. But it"],[337.53,341.73,"was impossible for two people to be. It"],[341.73,345.12,"was summer. And it was very hot in this"],[345.12,348.39,"iron box. They had such methods of"],[348.39,352.89,"torture. Every day, there were two mock"],[352.92,357.69,"executions. The most terrible one was"],[357.69,360.81,"when we were picked up at night. They"],[360.81,363.39,"were drinking because one of them had"],[363.39,366.93,"the best day and he wanted to shoot a"],[366.93,370.38,"Ukraine. This battalion made money by"],[370.38,372.69,"getting prisoners to cut cars into"],[372.69,376.56,"metal, so they weren't us as slaves. I"],[376.56,379.65,"was handcuffed to another person. It was"],[379.65,382.89,"very uncomfortable. My left hand was"],[382.92,386.67,"injured and so was the other guys. We"],[386.67,389.22,"were bound to each other as twin"],[389.22,392.15999999999997,"brothers. We had to pick and eat"],[392.28,395.13,"together. There was a car which they"],[395.13,398.4,"wanted to paint in camouflage. Someone"],[398.4,400.65,"mentioned the diamond artist. So they"],[400.65,405.45,"said, paint and we will let you go. I"],[405.45,408.65999999999997,"painted they gave me a few coins and"],[408.65999999999997,414.9,"clean clothes. And I was but there was"],[414.9,417.45,"one problem. The security service can my"],[417.45,420.6,"passport without the passport. You can't"],[420.6,423.12,"go anywhere. So I went with my"],[423.12,425.79,"girlfriend and they said, we released"],[425.79,429.78,"you take him into the basement. I stayed"],[429.78,433.2,"there for a month. This time. There were"],[433.2,437.16,"no interrogations, no bullying. Our job"],[437.16,440.49,"was to dig trenches. But my injuries"],[440.67,444.21,"made this impossible. They took me to a"],[444.21,447.93,"place called hotel lever, which before"],[447.93,450.63,"the occupation was a popular bar with"],[450.63,454.62,"the statues of the Beatles. We were in a"],[454.62,457.17,"hotel room, we have the shower, and we"],[457.17,459.9,"work in the kitchen peeling potatoes for"],[459.9,465.45,"the militants that leave. I was able to"],[465.48,467.58,"ask for a phone and I contacted my"],[467.58,469.95,"girlfriend who work in the security"],[469.95,474.21,"forces. She was given the number of some"],[474.21,478.29,"boss well, such telephone numbers are"],[478.29,481.32,"not given out to strangers. There are no"],[481.32,484.47,"cords. Someone simply asked to release"],[484.47,492.244,"me. And finally they let me go."],[492.269,494.699,"I stayed in local Python yet for a while"],[495.059,497.669,"until I realized that there was nothing"],[497.669,501.989,"there. All I had was 500 printers. And I"],[501.989,505.739,"went to key in key of the worst seemed"],[505.739,510.239,"far away. But on February 24, I woke up"],[510.389,513.539,"and went to the workshop. I looked at"],[513.539,518.579,"all the art and sought none of this is"],[518.579,522.569,"important. I just had such a breakdown"],[522.569,525.2090000000001,"questioning what have I been doing? Oh"],[525.2090000000001,527.879,"my wife. Only the art of killing"],[527.879,531.634,"Moscowitz is needed. That's it."],[531.659,535.919,"Everything else is not art. I went to"],[535.919,538.349,"the military headquarters. It's an"],[538.349,541.714,"understandable reaction to this events."],[541.739,544.889,"I was sent to territorial defense, but"],[544.889,549.029,"there was a long queue. And it was here"],[549.419,552.929,"that I realized that what artists do is"],[552.929,557.189,"also important. So I went back to work"],[557.2139999999999,586.206,""]]
-      }
-    for (let i=0; i<cues[cuekey].length; i++){
-    const cue = new VTTCue(cues[cuekey][i][0],cues[cuekey][i][1],cues[cuekey][i][2]);
-    track.addCue(cue); 
-}
-    track.addEventListener('cuechange', () => {
-    const activeCue = track.activeCues[0];
-    if (activeCue) {
-      document.getElementById('caption').textContent = activeCue.text;
-    }
-  });
-  console.log(audio.track)
 
-
-
- 
-}
 
 setup.play = () => {
  const audio = document.getElementById("audio")
@@ -235,28 +211,83 @@ setup.backThirty = () => {
 :: StoryInit {"position":"100,100","size":"100,100"}
 <<cacheaudio "27" "./../assets/audio/27.mp3">>
 <<cacheaudio "28" "./../assets/audio/28.mp3">>
-<<cacheaudio "29" "./../assets/audio/29.mp3">>
+<<cacheaudio "29" "./../assets/audio/29V2.mp3">>
 <<cacheaudio "30" "./../assets/audio/30.mp3">>
-<<cacheaudio "31" "./../assets/audio/31.mp3">>
+<<cacheaudio "31" "./../assets/audio/31V2.mp3">>
 <<cacheaudio "32.5" "./../assets/audio/32.5.mp3">>
-<<cacheaudio "32" "./../assets/audio/32.mp3">>
-<<cacheaudio "33.5" "./../assets/audio/33.5.mp3">>
+<<cacheaudio "32" "./../assets/audio/32V2.mp3">>
+<<cacheaudio "33.5" "./../assets/audio/33.5v2.mp3">>
 <<cacheaudio "33" "./../assets/audio/33.mp3">>
 <<cacheaudio "34" "./../assets/audio/34.mp3">>
 
 <<waitforaudio>>
 
 
-
 :: header [nobr]{"position":"100,225","size":"100,100"}
-<header>
+<header class="standard">
 <div class="header-item"></div>
 <div class="header-item">
   <h1>$title</h1>
-  <h3 class="subtitle">With Fire & Rage</h3>
+  <h3 class="subtitle">$location</h3>
+
+<div class="multiple-icon-wrapper">
+<<if $bathroom is true>>
+ <div class="multiple-icon-item">
+      <img src="assets/img/bathroom.png" >
+
+    </div>
+    <</if>>
+    <<if $wifi is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/wifi.png" >
+
+    </div>
+     <</if>>
+    <<if $food is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/food.png" >
+
+    </div>
+     <</if>>
+    <<if $charge is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/charge.png" >
+
+    </div>
+     <</if>>
+    <<if $stepfree is true>>
+      <div class="multiple-icon-item">
+      <img src="assets/img/stepfree.png" >
+
+    </div>
+     <</if>>
+    <<if $caution is true>>
+     
+      <div class="multiple-icon-item">
+      <img src="assets/img/caution.png" >
+
+    </div>
+     <</if>>
+</div>
 </div >
 </header>
 
+
+:: headerAR [nobr]{"position":"100,225","size":"100,100"}
+
+<header class="ar" >
+ <div class="nav-wrapper">
+    <div class="nav-item">
+  <h2>$ARtitle</h2>
+ </div>
+ </div>
+ <div class="nav-wrapper">
+    <div class="nav-item">
+    <p class="comment">Press the photo <br> to see it transform</p>
+    </div>
+    </div>
+    
+</header>
 
 :: headerstory [nobr]
 
@@ -269,26 +300,25 @@ setup.backThirty = () => {
   </div>
   <</if>>
 
-
-<<if $showMap is true>>
-    <div class="nav-wrapper">
-      <div class="nav-item">
-    <<link [img[assets/img/map.png]]>>
-    <<toggleclass "#map" "hide">>
-
-    <</link>>
-    </div>
-  </div>
-  <</if>>
+<div id="headerinstmount"></div>
 
 <<if $showForwards is true>>
+  <<if $sendOn is true>>
+ <div class="nav-wrapper" id="forIcon">
+    <div class="nav-item " >
+        <a href="https://fr-spirits-concrete-iron.netlify.app/">
+<img src="assets/img/for.png"></a>
+    </div>
+  </div>
+  <<else>>
     <div class="nav-wrapper" id="forIcon">
     <div class="nav-item " >
          [img[Forward|assets/img/for.png][$nextpass]]
     </div>
-  
   </div>
-     <</if>>
+  <</if>>
+<</if>>
+
 </header>
 
 
@@ -338,13 +368,13 @@ setup.backThirty = () => {
     </div>
     </div>
     <</if>> */
-     <<if $showCaptionsIcon is true>>
+     /* <<if $showCaptionsIcon is true>>
      <div class="nav-wrapper">
     <div class="nav-item">
   <<link [img[assets/img/captions.png]]>><<set $captions to !$captions>><<goto $passage>><</link>>
     </div>
     </div>
-    <</if>>
+    <</if>> */
     /* <<if $showFF is true>>
     <div class="nav-wrapper">
     <div class="nav-item">
@@ -395,27 +425,63 @@ setup.backThirty = () => {
         [img[Back|assets/img/back.png][$prevpass]]
     </div>
   </div>
- 
-  <div class="nav-wrapper">
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+   <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>
+ <<if $showReplay is true>>
+     <div class="nav-wrapper">
     <div class="nav-item">
-    <div id="mount"> <span class="comment">Press the photo <br> to see it transform</span></div>
-    </div></div>
+    [img[Replay|assets/img/replay.png][$passage]]
+    </div>
+    </div>
+    <</if>>
+   
+ 
     <div class="nav-wrapper">
     <div class="nav-item">
        <<button "Next">><<goto $nextpass>><</button>>
     </div>
   </div>
 </footer>
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 :: footerstory [nobr]
 
 <footer>
 
-<<if $showCaptionsIcon is true>>
+/* <<if $showCaptionsIcon is true>>
 <div class="nav-wrapper">
     <div class="nav-item">
       <<link [img[assets/img/captions.png]]>>
-      /* <<toggleclass "#posterWrapper" "small">> */
+     
       <<if $captionToggle is true>>
          <<toggleclass "#poster" "hide">>
          <<toggleclass "#storyContainer" "captions">>
@@ -430,7 +496,7 @@ setup.backThirty = () => {
       <</link>>
 </div>
   </div>
-<</if>>
+<</if>> */
 
 
 <div class="nav-wrapper">
@@ -459,14 +525,6 @@ setup.backThirty = () => {
 
 <div class="nav-wrapper">
   <div class="nav-item">
-    <<link "+30s">>
-      <<set $fn to setup.addThirty()>>
-  <</link>>
-  </div>
-</div>
-
-<div class="nav-wrapper">
-  <div class="nav-item">
   <<link [img[assets/img/transcript.png]]>>
 <<if $transcript is false>>
   <<set $transcript to true>>
@@ -482,17 +540,26 @@ setup.backThirty = () => {
   </div>
 </div>
 
+<div class="nav-wrapper">
+  <div class="nav-item">
+    <<link "+30s">>
+      <<set $fn to setup.addThirty()>>
+  <</link>>
+  </div>
+</div>
+
+
+
 </footer>
 
 :: footerstorywalk [nobr]
 
 <footer>
 
-<<if $showCaptionsIcon is true>>
+/* <<if $showCaptionsIcon is true>>
 <div class="nav-wrapper">
     <div class="nav-item">
       <<link [img[assets/img/captions.png]]>>
-      /* <<toggleclass "#posterWrapper" "small">> */
       <<if $captionToggle is true>>
          <<toggleclass "#storyContainer" "captions">>
           <<set $captionToggle to false>>
@@ -505,7 +572,7 @@ setup.backThirty = () => {
       <</link>>
 </div>
   </div>
-<</if>>
+<</if>> */
 
 
 <div class="nav-wrapper">
@@ -532,13 +599,7 @@ setup.backThirty = () => {
   </div>
 </div>
 
-<div class="nav-wrapper">
-  <div class="nav-item">
-    <<link "+30s">>
-      <<set $fn to setup.addThirty()>>
-  <</link>>
-  </div>
-</div>
+
 
 <div class="nav-wrapper">
   <div class="nav-item">
@@ -556,8 +617,17 @@ setup.backThirty = () => {
   <</link>>
   </div>
 </div>
+<div class="nav-wrapper">
+  <div class="nav-item">
+    <<link "+30s">>
+      <<set $fn to setup.addThirty()>>
+  <</link>>
+  </div>
+</div>
 
 </footer>
+
+
 
 
 :: footerMap [nobr]{"position":"100,375","size":"100,100"}
@@ -585,54 +655,10 @@ setup.backThirty = () => {
 
 
 
-:: credits [nobr]{"position":"450,50","size":"100,100"}
-<<set $passage to "credits">>
-<<set $showMap to false>>
-<<set $showAudio to false>>
-<<set $showReplay to false>>
-<header class="credits">
-<div class="header-item"></div>
-<div class="header-item">
-  <h1>With Fire & Rage</h1>
-</div >
-</header>
-<main class="credits">
-<p>Testimonies include: </p>
-<h3>OLYA MUKHINA</h3>
-<p>Executive Director of the Lesya Ukrainka Theater</p>
-<h3>STAS KONONOV</h3>
-<p>Musician and Guitarist</p>
-<h3>ALEVTINA SHVETSOVA</h3>
-<p>Arts Journalist and Artist</p>
-<h3>LUTFIE ZUDIEVA</h3>
-<p>Civic Journalist</p>
-<h3>OLEKSANDRA OSADCHA</h3>
-<p>Researcher and Curator at Kharkiv School Of Photography</p>
-<h3>SERHIY ZAKHAROV</h3>
-<p>Artist</p>
-<h3>VICTORIA AMELINA</h3>
-<p>Writer and Poet</p>
-<h3>ANNA SHARYHINA</h3>
-<p>Activist, Cultural Manager and Founder of Sphere</p>
-<h3>JULIA NIKOLAJEVSKA</h3>
-<p>Musician and Cultural Manager Kharkiv Music Fest</p>
-<h3>DMYTRO KOSTIUMINSKIJ</h3>
-<p>Artist, Theatre director and Filmmaker</p>
-<br/>
-<p>Poetry & Additional Texts include:</p>
-<p>Text Counter/retnuoC by Alexander Levitsky from Anthology24 Text by Nina Zakhozhenko from Anthology24</p>
-<p>Poem by Aliye Kenzhalieva</p>
-<p>Poem Ctrl+Z by Mykhailo Zharzhalio</p>
-<p>Poem Survivor's Syndrome by Andriy Bondarenko</p>
-<p>Poem by Ostap Slyvynsky</p>
-</main>
-<<include "footerback">>
-
-
 :: beginning [nobr]  {"position":"700,175","size":"100,100"}
 <<set $prevpass to "beginning">>
 <<set $passage to "beginning">>
-<<set $nextpass to "landing">>
+<<set $nextpass to "framing">>
 <<set $transcript to false>>
 <<set $playToggle to false>>
 <<set $captionToggle to false>>
@@ -642,20 +668,257 @@ setup.backThirty = () => {
 <<set $showMap to false>>
 
 <div class="comp-warning">Best experienced on a phone</div>
-<main class="" id="">
+<main class="beginning" id="">
 
 <div class="poster-wrapper" id="poster">
    <img class="poster" src="./../assets/img/heroes.jpeg"/>
  </div>
+ <p class="comment center">Put your headphones in and turn up the volume</p>
  <div class="menu-wrapper">
     <<button "Begin">><<goto $nextpass>><</button>>
 </div>
 </main>
 
 
+:: framing [nobr]  {"position":"700,175","size":"100,100"}
+<<set $prevpass to "beginning">>
+<<set $passage to "framing">>
+<<set $nextpass to "instructions">>
+<<set $transcript to false>>
+<<set $playToggle to false>>
+<<set $captionToggle to false>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $showMap to false>>
+
+<main class="instructions" id="">
+<div id="mount"></div>
+<<timed 0.1s>><<replace "#mount">>
+<p>Welcome to With Fire and Rage</p>
+<</replace>><</timed>>
+
+<<timed 2s>><<append "#mount">>
+<p>I’m Veronika Skliarova, artist and producer from Kharkiv, Ukraine</p>
+<</append>><</timed>>
+
+<<timed 4s>><<append "#mount">>
+<p>I will be your guide for today
+</p>
+<</append>><</timed>>
+
+<<timed 6s>><<append "#mount">>
+<p>First let me show you, how to navigate your experience...
+</p>
+<</append>><</timed>>
+
+<<timed 8s>><<append "#mount">>
+<p>You can move forward via a button like<<button "This">><<goto $nextpass>><</button>></p> 
+<</append>><</timed>>
+ 
+</main>
+<<include "footer">>
+
+
+
+:: instructions [nobr]
+<<set $prevpass to "beginning">>
+<<set $passage to "instructions">>
+<<set $nextpass to "instructions2">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to false>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+
+<<set $map = setup.generateViewMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat Liverpool School Lane"})>>
+
+<div id="audio"></div>
+/* <<include "header">> */
+<main class="instructions">
+<h2>Onboarding</h2>
+<div id="map" class="hide">$map</div>
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>This icon takes you to a map <<link [img[assets/img/map.png]]>><<toggleclass "#map" "hide">><</link>></p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>This arrow takes you back[img[Back|assets/img/back.png][$prevpass]]</p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+<p>This arrow skips you forward [img[Forward|assets/img/for.png][$nextpass]]</p>
+  <</append>>
+    
+<</timed>>
+<<timed 6s>>
+<<append "#mount">>
+<p>You can replay with this icon   [img[Replay|assets/img/replay.png][$passage]]</p>
+  <</append>>
+<</timed>>
+ <<timed 8s>>
+  <<append "#mount">>
+<p>To read a transcript of the audio press[img[Forward|assets/img/transcript.png][$nextpass]]</p>
+  <</append>>
+
+<</timed>>
+
+ <<timed 10s>>
+  <<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+:: instructions2 [nobr]
+<<set $prevpass to "instructions">>
+<<set $passage to "instructions2">>
+<<set $nextpass to "instructions3">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to false>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<div id="audio"></div>
+/* <<include "header">> */
+<main class="instructions">
+<h2>Onboarding</h2>
+<div id="map" class="hide">$map</div>
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<replace "#mount">>
+    <p>We will travel to ten different locations</p>
+  <</replace>>
+
+<</timed>>
+<<timed 2s>>
+   <<append "#mount">>
+<p>Walking for a little over one kilometre, in short stretches </p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+<p>It’s up to you how fast or slow you go</p>
+  <</append>>
+    
+<</timed>>
+<<timed 6s>>
+<<append "#mount">>
+<p>The full tour takes between 90 and 120 minutes 
+</p>
+  <</append>>
+<</timed>>
+
+ <<timed 8s>>
+  <<append "#mount">>
+<p>Listen to as much or as little as you like </p>
+  <</append>>
+<</timed>>
+
+<<timed 10s>>
+  <<append "#mount">>
+<p>You are always welcome to come back another day </p>
+  <</append>>
+<</timed>>
+
+
+ <<timed 12s>>
+  <<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
+
+
+
+:: instructions3 [nobr]
+<<set $prevpass to "instructions2">>
+<<set $passage to "instructions3">>
+<<set $nextpass to "landing">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to false>>
+<<set $showForwards to true>>
+<<set $showBackwards to true>>
+<<set $showCaptionsIcon to false>>
+
+<div id="audio"></div>
+/* <<include "header">> */
+<main class="instructions">
+<h2>Onboarding</h2>
+<div id="map" class="hide">$map</div>
+<div id="mount"></div>
+<<timed 0.1s>>
+  <<append "#mount">>
+    <p>At every location, I will suggest places to sit, to lean, to shelter</p>
+  <</append>>
+<</timed>>
+<<timed 2s>>
+  <<append "#mount">>
+    <p>Make yourself comfortable, if you want take a break</p>
+  <</append>>
+<</timed>>
+<<timed 4s>>
+  <<append "#mount">>
+    <p>These icons show important information and facilities  </p>
+  <</append>>
+<</timed>>
+<<timed 5s>>
+   <<append "#mount">>
+  <div class="multiple-icon-wrapper">
+      <div class="multiple-icon-item">
+      <img src="assets/img/bathroom.png" >
+    <span>Bathroom </span>
+    </div>
+      <div class="multiple-icon-item">
+      <img src="assets/img/wifi.png" >
+    <span>Wifi </span>
+    </div>
+      <div class="multiple-icon-item">
+      <img src="assets/img/food.png" >
+    <span>Food & Drink </span>
+    </div>
+</div>
+
+   <div class="multiple-icon-wrapper">
+      <div class="multiple-icon-item">
+      <img src="assets/img/stepfree.png" >
+    <span>Step-free access </span>
+    </div>
+      <div class="multiple-icon-item">
+      <img src="assets/img/wifi.png" >
+    <span>Phone Charger  </span>
+    </div>
+      <div class="multiple-icon-item">
+      <img src="assets/img/caution.png" >
+    <span>Caution! take care crossing roads</span>
+    </div>
+</div>
+
+  <</append>>
+<</timed>>
+ <<timed 7s>>
+  <<append "#mount">>
+<<button "Next">><<goto $nextpass>><</button>>
+  <</append>>
+<</timed>>
+</main>
+<<include "footer">>
 
 :: landing [nobr]
 <<set $title to "Our Own Personal Heroes">>
+<<set $location to "Bluecoat">>
 <<set $openOrClosed to "closed">>
 <<set $prevpass to "beginning">>
 <<set $passage to "landing">>
@@ -666,7 +929,7 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateViewMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"})>>
+<<set $map = setup.generateViewMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat Liverpool School Lane"})>>
 <<audio ":all" stop>><<audio "27" play>>
 <div id="audio"></div>
 <<include "header">>
@@ -692,11 +955,16 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
+<<timed 0.1s>>  <<include "header">><</timed>>
 <div id="audio"></div>
-<<include "header">>
+
 <main class="instructions">
 <div id="map" class="hide">$map</div>
   <<if $openOrClosed is "open">>
+  <<set $bathroom to true>>
+  <<set $wifi to true>>
+  <<set $food to true>>
+  <<set $charge to true>>
   <<audio ":all" stop>><<audio "28" play>>
   <p>Go straight through the gates and across the courtyard</p>
   <p>Enter the building, walk through the cafe and out to the garden</p>
@@ -705,8 +973,11 @@ setup.backThirty = () => {
   <<button "I'm ready">><<goto $nextpass>><</button>>
 <</if>>
 
-
   <<if $openOrClosed is "closed">>
+   <<set $bathroom to false>>
+  <<set $wifi to false>>
+  <<set $food to false>>
+  <<set $charge to false>>
   <<audio ":all" stop>><<audio "31" play>>
   <p>Find a place to make yourself comfortable</p>
   <p>Facing the museum building </p>
@@ -732,12 +1003,13 @@ setup.backThirty = () => {
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to true>>
 <<set $showMap to false>>
+<<set $sendOn to false>>
 <<set $transcriptname to  "heroestranscript">>
 <<audio ":all" stop>><<audio "29" play>>
 <<include "headerstory">>
 <main class="story" id="storyContainer">
 <audio id="audio" >
-  <source src="https://www.dropbox.com/s/910rpedekxpxqfq/05.%20Our%20Own%20Personal%20Heroes%20V1.mp3?raw=1">
+  <source src="https://withfireandrageliverpool.com/audio/PH/heroesv2.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 <div class="poster-wrapper" id="poster">
@@ -746,26 +1018,33 @@ setup.backThirty = () => {
   
 <div id="caption" class="hide"></div>
 <div id="transcript"></div>
-<div id="mount"  ><p class="comment"> To listen to <em>$title</em> press <div class="inline-btn-wrapper">
+<div id="transcript"></div>
+<div id="mount"></div>
+<<timed 0.1s>><<replace "#headerinstmount">><p class="comment"> To listen to <em>$title</em> press <div class="inline-btn-wrapper">
 <<link "play">>
         <<if $playToggle is false>>
       <<set $fn to setup.play()>>
       <<set $playToggle to true>>
       <<addclass "#playpause" "playhighlight">>
       <</if>>
-     
-
-<<replace "#mount">>
+<<replace "#headerinstmount">>
 <p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
-
  <</replace>>
- <</link>></div></p></div>
+ <</link>>
+  </div></p>
+ <</replace>><</timed>>
+
+ <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
+ <</timed>>
+
 </main>
 
 <<include "footerstory">>
-<<done>>
-  <<set $addC to setup.addCaptions("heroes")>>
-<</done>>
+
 
 
 
@@ -879,9 +1158,11 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
+<<set $ARtitle to "Kharkiv School Of Photoghraphy">>
+<<set $transcriptname to  "ARtranscript">>
 <<audio ":all" stop>><<audio "32.5" play>>
-/* <<include "header">> */
-/* OPEN */
+<<include "headerAR">>
+
 <main class="ar">
 
   <div class="ar-imgs-container one" id="ARContainer">
@@ -894,9 +1175,17 @@ But photography has the possibility to fuse both aspects, creating a historical 
   </div>
 
 
+<div id="transcript"></div>
+
 </main>
 <<include "footerAR">>
 <<done>><<set $s to setup.startup()>><</done>>
+
+
+:: ARtranscript
+The Museum of the Kharkiv School of Photography, holds archives that mark an amazing page in our art history. 
+
+Here you can see photos from across the many different generations, including from current photographers, covering the full-scale invasion.
 
 
 
@@ -919,7 +1208,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <div id="map" class="hide">$map</div>
 <p>Ready to go to the St George’s Quarter?</p>
 <p>You want to arrive to the entrance at St John’s Garden</p>
-
+<div class="caution" ><img src="assets/img/stepfree.png"><p>Go around St John's Garden to the entrance on opposite side</p></div>
   <<button "Let's go">><<goto $nextpass>><</button>>
 </main>
 <<include "footer">>
@@ -938,6 +1227,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to true>>
+<<set $sendOn to false>>
 <<set $transcriptname to  "justdoittranscript">>
 /* Everyman to 1931  */
 <<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat"},"St Georges Quarter Liverpool")>>
@@ -945,50 +1235,39 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
-  <source src="https://www.dropbox.com/s/6nopcpng531b1t0/05.%20WALK%205%20JUST%20DO%20IT%20V1.mp3?raw=1">
+  <source src="https://withfireandrageliverpool.com/audio/PH/heroesv2.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 
 <div id="map" class="">$map</div>
-/* <div class="poster-wrapper hide" id="poster">
-   <img class="poster" src="./../assets/img/obpy.jpeg"/>
- </div> */
-<div id="caption" class="hide" ></div>
+
 <div id="transcript"></div>
 <div id="mount"></div>
-
-
-<<timed 1s>>
-<<audio ":all" stop>><<audio "33.5" play>>
-  <<replace "#mount">>  
-<p class="comment">The map <<link [img[assets/img/map.png]]>><</link>> will help guide you</p>
-<</replace>>
- <</timed>>
-
- <<timed 6s>>
- <<audio ":all" stop>><<audio "34" play>>
-  <<replace "#mount">>  
-<p class="comment">As you begin to walk press <div class="inline-btn-wrapper">
+<<timed 0.1s>><<replace "#headerinstmount">><p class="comment"> To listen to <em>$title</em> press <div class="inline-btn-wrapper">
 <<link "play">>
-      <<replace "#mount">>
-    <p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
-    <</replace>>
         <<if $playToggle is false>>
       <<set $fn to setup.play()>>
       <<set $playToggle to true>>
       <<addclass "#playpause" "playhighlight">>
       <</if>>
-      <</link>></div></p>
+<<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+ <</link>>
+  </div></p>
+ <</replace>><</timed>>
 
-      <</replace>>
+ <<timed 30s>>
+ <<replace "#headerinstmount">>
+<p class="comment"> When you're finished listening, let me know <div class="inline-btn-wrapper"><<button "I'm finished">><<goto $nextpass>><</button>></div></p>
+ <</replace>>
+
  <</timed>>
 
 </main>
 
 <<include "footerstorywalk">>
-<<done>>
-  <<set $addC to setup.addCaptions("justdoit")>>
-<</done>>
+
 
 
 
