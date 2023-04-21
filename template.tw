@@ -219,6 +219,7 @@ setup.backThirty = () => {
 <<cacheaudio "33.5" "./../assets/audio/33.5v2.mp3">>
 <<cacheaudio "33" "./../assets/audio/33.mp3">>
 <<cacheaudio "34" "./../assets/audio/34.mp3">>
+<<cacheaudio "39.5" "./../assets/audio/39.5.mp3">>
 
 <<waitforaudio>>
 
@@ -306,7 +307,7 @@ setup.backThirty = () => {
   <<if $sendOn is true>>
  <div class="nav-wrapper" id="forIcon">
     <div class="nav-item " >
-        <a href="https://fr-war-of-words.netlify.app/">
+        <a href="https://fr-investigation-zone.netlify.app/">
 <img src="assets/img/for.png"></a>
     </div>
   </div>
@@ -653,6 +654,63 @@ setup.backThirty = () => {
   </div>
 </footer>
 
+:: footerSer [nobr]
+<footer class="ar">
+ <div class="nav-wrapper">
+    <div class="nav-item">
+        [img[Back|assets/img/back.png][$prevpass]]
+    </div>
+  </div>
+  <div class="nav-wrapper playpause-wrapper">
+  <div class="nav-item" id="playpause">
+      <<link [img[assets/img/playpause.png]]>>
+        <<if $playToggle is false>>
+      <<set $fn to setup.play()>>
+      <<set $playToggle to true>>
+      <<addclass "#playpause" "playhighlight">>
+      <<else>>
+       <<set $fn to setup.pause()>>
+        <<set $playToggle to false>>
+      <<removeclass "#playpause" "playhighlight">>
+      <</if>>
+      <</link>>
+  </div>
+</div>
+   <div class="nav-wrapper">
+  <div class="nav-item">
+  <<link [img[assets/img/transcript.png]]>>
+<<if $transcript is false>>
+  <<set $transcript to true>>
+  <<replace "#transcript">>
+    <<include $transcriptname>>
+  <</replace>>
+  <<else>>
+  <<set $transcript to false>>
+  <<replace "#transcript">>
+  <</replace>>
+  <</if>>
+  <</link>>
+  </div>
+</div>
+ <<if $showReplay is true>>
+     <div class="nav-wrapper">
+    <div class="nav-item">
+    [img[Replay|assets/img/replay.png][$passage]]
+    </div>
+    </div>
+    <</if>>
+   
+ 
+ <div class="nav-wrapper" id="forIcon">
+    <div class="nav-item " >
+        <a href="https://fr-investigation-zone.netlify.app/">
+<button>Next</button></a>
+    </div>
+  </div>
+  
+
+</footer>
+<<done>><<addclass "#playpause" "playhighlight">><</done>>
 
 
 :: beginning [nobr]  {"position":"700,175","size":"100,100"}
@@ -1220,7 +1278,7 @@ Here you can see photos from across the many different generations, including fr
 :: justdoit[nobr]
 <<set $prevpass to "instnar5">>
 <<set $passage to "justdoit">>
-<<set $nextpass to "end">>
+<<set $nextpass to "instnar6">>
 <<set $showMap to true>>
 <<set $transcript to false>>
 <<set $playToggle to false>>
@@ -1228,7 +1286,7 @@ Here you can see photos from across the many different generations, including fr
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to true>>
-<<set $sendOn to true>>
+<<set $sendOn to false>>
 <<set $transcriptname to  "justdoittranscript">>
 /* Everyman to 1931  */
 <<set $map = setup.generateDirectionsMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat Liverpool School Lane"},"St Georges Quarter Liverpool, St Johns Garden")>>
@@ -1236,7 +1294,7 @@ Here you can see photos from across the many different generations, including fr
 <<include "headerstory">>
 <main class="story" id="storyContainer" >
 <audio id="audio" >
-  <source src="https://withfireandrageliverpool.com/audio/PH/heroesstreetsserv2.mp3">
+  <source src="https://withfireandrageliverpool.com/audio/PH/justdoitv2.mp3">
   <track kind="captions" srclang="en" label="English captions" id="captrack" default>
 </audio>
 
@@ -1260,9 +1318,8 @@ Here you can see photos from across the many different generations, including fr
 <<link "play">>
   <<timed 4s>>
       <<replace "#headerinstmount">>
-    <p class="comment"> Are you outside the Liverpool Philharmonic?  
-    <a href="https://fr-war-of-words.netlify.app/">
-<button>I'm here</button></a>
+    <p class="comment"> Are you at St John’s Garden in St Georges Quarter? 
+    <<button "I'm here">><<goto $nextpass>><</button>>
     </p>
     <</replace>>
    <</timed>>
@@ -1279,8 +1336,8 @@ Here you can see photos from across the many different generations, including fr
 
   <<timed 30s>>
 <<replace "#headerinstmount">>
-    <p class="comment"> Are you outside the Liverpool Philharmonic?  
-    <a href="https://fr-war-of-words.netlify.app/">
+    <p class="comment">Are you at St John’s Garden in St Georges Quarter? 
+    <a href="https://fr-investigation-zone.netlify.app/">
 <button>I'm here</button></a>
     </p>
     <</replace>>
@@ -1349,7 +1406,77 @@ I went to the military headquarters, it is an understandable reaction to these e
 I was sent to territorial defence but there was a long queue. And it was here that I realized that what artists do is also important… and I went back to work. 
 
 
+:: instnar6 [nobr]
+<<set $prevpass to "justdoit">>
+<<set $passage to "instnar6">>
+<<set $nextpass to "AR2">>
+<<set $showMap to true>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $map = setup.generateDirectionsMap(53.4030572538972, -2.969504715141457,53.4030572538972, -2.969504715141457)>>
+/* <<audio ":all" stop>><<audio "32" play>> */
+<div id="audio"></div>
+
+<main class="instructions">
+<div id="map" class="hide">$map</div>
+
+<p>Let me show you some you some photos </p>
+<p>Walk down the lefthand side of the park </p>
+<p>Face the railings</p>
+<p>Hold up your phone </p>
+
+    <<button "Show me">><<goto $nextpass>><</button>>
+
+</main>
+<<include "footer">>
 
 
 
+:: AR2 [nobr]{"position":"450,50","size":"100,100"}
+<<set $prevpass to "instnar6">>
+<<set $passage to "AR2">>
+<<set $nextpass to "AR2">>
+<<set $showMap to false>>
+<<set $showAudio to false>>
+<<set $showReplay to true>>
+<<set $showBackwards to true>>
+<<set $showForwards to true>>
+<<set $showCaptionsIcon to false>>
+<<set $ARtitle to "Serhiy Zakharov’s Street Art ">>
+<<set $transcriptname to  "AR2transcript">>
+<<audio ":all" stop>><<audio "39.5" play>>
+<<include "headerAR">>
 
+<main class="ar portrait">
+
+  <div class="ar-imgs-container one" id="ARContainer">
+    <div class="hidden-img-wrapper touch transparent" id="reveal" >
+        <img src="./assets/img/gifs/serhiy.gif" class="">
+      </div>
+    <div class="ar-img-wrapper touch bottom" id="initial" >
+      <img src="./assets/img/serhiy.jpeg" class="">
+      </div>
+  </div>
+
+
+<div id="transcript"></div>
+
+</main>
+<<include "footerSer">>
+<<done>><<set $s to setup.startup()>><</done>>
+
+
+:: AR2transcript
+<br>
+<br>
+
+Serhiy Zakharov created street artwork that mocked the self-proclaimed “Donetsk People's Republic” 
+
+Some images contained the literary character Sharikov a villain from Mikhail Bulgakov's novel. He was dressed in camouflage with the symbol of the so-called Novorossia (New Russia). 
+
+There was the Russian military commander Igor Strelkov holding a gun to his head with the Nike catchphrase "Just Do It”.  
+
+There was also an image of death with a grenade and a clown.

@@ -460,6 +460,10 @@ header.ar > .nav-wrapper > .nav-item > p.comment {
   min-height: 50vh;
 }
 
+main.ar.portrait > .ar-imgs-container {
+  min-height: 60vh;
+}
+
 /* .ar-imgs-container.one {
   background-image: url("./../assets/img/le15.jpeg");
 } */
