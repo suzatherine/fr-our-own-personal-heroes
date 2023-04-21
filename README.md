@@ -4,4 +4,7 @@ add captions
 final map route may need correcting
 lofi AR images not found yet
 
-SUZANNA WROTE THIS
+# to compile twee
+
+source ~/.bash_profile &&
+tweego -o index.html template.tw -w
