@@ -84,17 +84,21 @@ return iFrame
 
 // TOUCHEVENTS 
 // taken from https://developer.mozilla.org/en-US/docs/Web/API/Touch_events  
-setup.startup = () =>  {
+setup.startup = (playOnTouch) =>  {
   const ongoingTouches = [];
 
 const handleStart = (evt) =>{
   evt.preventDefault();
+  if (playOnTouch === true){
+const audio = document.getElementById("audio");
+const playpause = document.getElementById("playpause");
+ audio.play();
+ playpause.classList.add("playhighlight");
+}
  const initial = document.getElementById("initial");
 const reveal = document.getElementById("reveal");
      initial.classList.add("transparent");  
      reveal.classList.remove("transparent");  
-
-
 }
 
 const handleMove = (evt) => {
@@ -716,7 +720,7 @@ setup.backThirty = () => {
 :: beginning [nobr]  {"position":"700,175","size":"100,100"}
 <<set $prevpass to "beginning">>
 <<set $passage to "beginning">>
-<<set $nextpass to "framing">>
+<<set $nextpass to "landing">>
 <<set $transcript to false>>
 <<set $playToggle to false>>
 <<set $captionToggle to false>>
@@ -735,7 +739,7 @@ setup.backThirty = () => {
  <div class="menu-wrapper">
     <<button "Keep going">><<goto $nextpass>><</button>>
      <<button "I'm joining the audio tour here">><<goto "framing">><</button>>
-     <a href="www.withfireandrage.com"><button>Leave the Tour</button></a>
+     <a href="https://www.withfireandrage.com"><button>Leave the Tour</button></a>
 </div>
 </main>
 
@@ -751,7 +755,9 @@ setup.backThirty = () => {
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
 <<set $showMap to false>>
-
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp1.mp3">
+</audio>
 <main class="instructions" id="">
 <div id="mount"></div>
 <<timed 0.1s>><<replace "#mount">>
@@ -791,12 +797,10 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-
-
 <<set $map = setup.generateViewMap({originLat: 53.404357684743694,originLong: -2.983900550927597, originName: "The Bluecoat Liverpool School Lane"})>>
-
-<div id="audio"></div>
-/* <<include "header">> */
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp2.mp3">
+</audio>
 <main class="instructions">
 <h2>Onboarding</h2>
 <div id="map" class="hide">$map</div>
@@ -848,9 +852,9 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-
-<div id="audio"></div>
-/* <<include "header">> */
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp3.mp3">
+</audio>
 <main class="instructions">
 <h2>Onboarding</h2>
 <div id="map" class="hide">$map</div>
@@ -912,9 +916,9 @@ setup.backThirty = () => {
 <<set $showForwards to true>>
 <<set $showBackwards to true>>
 <<set $showCaptionsIcon to false>>
-
-<div id="audio"></div>
-/* <<include "header">> */
+<audio id="audio" autoplay >
+  <source src="https://withfireandrageliverpool.com/audio/ONB/onboardingp4.mp3">
+</audio>
 <main class="instructions">
 <h2>Onboarding</h2>
 <div id="map" class="hide">$map</div>
@@ -1110,44 +1114,76 @@ setup.backThirty = () => {
 
 :: heroestranscript
 
-<h2>Transcript</h2>
+<h2>OUR OWN PERSONAL HEROES</h2>
 
-NARRATOR:
-Across the ages, there has always been Russian colonialism, censorship, and attempts to erase our culture.
+NARRATION BY VERONIKA SKLIAROVA:
+
 Imagine losing the art, and artefacts that represent your history? Your identity? 
+
 In museums in Kherson and Mariupol, there are now empty rooms where Russians have taken everything.
+
 How would you feel to have another country steal your heritage? Only to house it in their own museums, and rewrite your history?
+
 Two weeks into the full-scale invasion a rocket hit the Ivankiv Historical and Local History Museum. Inside was the works of Maria Prymachenko a world-renowned artist, who drew on card with natural pigments. 
+
 The museum went totally on fire. Totally. Some people from the village, with just their bare hands, tried to rescue her works.
+
 It was a total shock.
+
 I began calling different people, asking if they need help to preserve our cultural heritage.
-This is how I came into contact with Oleksandra Osadcha researcher and curator of the Kharkiv School of Photography...
+
+This is how I came into contact with Oleksandra Osadcha researcher and curator of the Museum of the Kharkiv School of Photography…
 
 
-OLEKSANDRA OSADCHA:
-The whole of January was full of this pre-escalation tension and I had been talking with Sergiy Lebedynskyy the director of the Museum of Kharkiv School of Photography about how we should prepare our collections for evacuation. 
-We have amazing photography archives, they are not just Ukrainian Heritage but World heritage. The core of the collection is the artwork of the Kharkiv School of Photography. It wasn’t an institution but an informal community of three generations of likeminded artists.
+TESTIMONY OF OLEKSANDRA OSADCHA:
+
+The whole of January was full of this pre-escalation tension and I had been talking with Sergiy Lebedynskyy the director of the Museum of Kharkiv School of 
+Photography about how we should prepare our collections for evacuation. 
+
+We have amazing photography archives, they are not just Ukrainian Heritage but World heritage. The core of the collection is the artwork of the Kharkiv School of Photography. It wasn’t an institution but an informal community of three generations of like-minded artists.
+
 It emerged in the late 1960’s and included top-level photographers like Boris Mikhailov and his friends - Evgeniy Pavlov, Viktor Kochetov, Roman Pyatkovka, Sergiy Solonsky and others. Whose work in the 60’s, 70’s and 80’s expanded the borders of the medium and demonstrated how it can overcome censorship. Trying to get through the muteness of late Soviet epoch. 
+
 On the one hand what they were doing was really resistance, but on the other hand, it was not manifested or obvious. These photographers saw their practice as a tool to carve out an alternative space. Before the collapse of the USSR they had few chances to present their works in public. For instance the first generation, the so-called Vremia group (which is translated as Time from Russian) had only one exhibition throughout the whole history of the group, which is said to be closed in a couple of hours after opening.
+
 So they chose to create an inner circle of photographers, who were thinking the same way, sharing their thoughts and ideas.
+
 The photos from this generation hold the phenomenon and history of this society, their relationships and bonds. Preserving these archives was what began the Kharkiv School of Photography and it’s become a space to unite researchers and spotlight Ukrainian photographers from across the decades until now.
+
 When the full-scale invasion began I headed to the west, because the priority was the life of my family.
+
 For a week, I was just in a complete state of anabiosis. We were all numb and frozen. Just watching what was going on.
+
 Then I received a message from Veronika that people were working to secure the archives.
+
 It was a wake-up call, that I was more or less safe and now must take care of what we can.
+
 We started talking quietly to people who had chosen to stay in Kharkiv. Those were Rodion Prokhorenko, Oleksiy Tovpyha, Zoya Zakharova, Vladyslav Krasnoshchok and Oleksandr Fomenko. We tried not to bring any attention to where the archives were located and what we were doing. 
+
 Volunteers gathered at the museum and helped pack everything up. 
+
 They also went to other photographers and took their private archives, and for a moment the museum turned into a spot to bring all cultural stuff from around the city and transport it.
+
 I cannot even imagine what level of courage you need to think about art in this moment.
-In a situation of complete danger, people have different reactions - fight, freeze or flight. These volunteers decided a completely unbiological reaction - they choose to fight. 
+
+In a situation of complete danger, people have different reactions - fight, freeze or flight. These volunteers decided a completely unbiological reaction - they chose to fight. 
+
 They were incredibly brave. 
+
 We owe them the whole security of the museum. 
+
 They are our own personal heroes. 
+
 Now I feel that not only photography but art in general in Ukraine is in a very tricky position.
+
 When you see all of these photos of ruined buildings, of wounded and killed people, you start asking yourself what is this for? 
+
 In these days of such extensive media coverage, it risks losing weight. 
+
 It is a huge challenge for our photographers to find this language that will manage to make people stop their scrolling, and pause. That will give some meaningful narration. 
+
 But photography has the possibility to fuse both aspects, creating a historical document, and adding an individual touch to the message. 
+
 
 
 
@@ -1222,7 +1258,10 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<set $transcriptname to  "ARtranscript">>
 <<audio ":all" stop>><<audio "32.5" play>>
 <<include "headerAR">>
+<audio id="audio" >
+  <source src="https://withfireandrageliverpool.com/audio/WW/PD5V1.mp3">
 
+</audio>
 <main class="ar">
 
   <div class="ar-imgs-container one" id="ARContainer">
@@ -1239,13 +1278,16 @@ But photography has the possibility to fuse both aspects, creating a historical 
 
 </main>
 <<include "footerAR">>
-<<done>><<set $s to setup.startup()>><</done>>
+<<done>>
+<<removeclass "#playpause" "playhighlight">>
+<<set $s to setup.startup(true)>><</done>>
 
 
 :: ARtranscript
 The Museum of the Kharkiv School of Photography, holds archives that mark an amazing page in our art history. 
 
 Here you can see photos from across the many different generations, including from current photographers, covering the full-scale invasion.
+
 
 
 
@@ -1355,57 +1397,97 @@ Here you can see photos from across the many different generations, including fr
 
 :: justdoittranscript
 
-<h2>Transcript</h2>
+<h2>JUST DO IT </h2>
 
-SERHIY ZAKHAROV:
+NARRATION BY VERONIKA SKLIAROVA:
+
+In 2014 as Russia occupied regions of Crimea, Luhansk and Donetsk, freedom of speech was suppressed. Determined to fight censorship, artists like Serhiy Zakharov decided to use the streets to create public conversation, risking their safety and their lives.
+
+
+TESTIMONY OF SERHIY ZAKHAROV:
+
 Of course, I was born an artist, this is what was given to me, and I cannot refuse. But I lived just an ordinary life, trying to find a chance to earn something, to spend something.
+
 I was the same swine as everyone else.
+
 Well, in Donetsk I lived in that context. We understood that we lived in a feudal, corrupt society and everyone looked for their own comfort zone. There was no feeling that anything needed to change. 
+
 But during the Maidan in 2014 I was amazed, because finally, something real was happening. People came out against this state machine, and no one gave any chance that it would not be a victory. 
+
 It inspired me a lot, and I realised that I wanted to be in the country that I lived.
-Then Donetsk became occupied by Russia and its proxies. There was no centralised power in the city. Just scattered gangs, each of which controlled a certain district.
-At first, I didn’t fully believe that this was permanent. But then, when I saw how things were developing, I understood that this was the end. 
+
+Then Donetsk became occupied by Russia and its proxies. 
+
 I had a self-realisation, that if I sit and do nothing, it will torment me for the rest of my life. 
+
 I gathered my friends and invited them to participate in creating street art. They refused because it was too dangerous. But one person, a professional photographer agreed to help.
+
 There was neither opportunity nor time to paint on the street walls.
+
 So I worked on plywood with the plan to place the finished works around the city.
+
 I created figures that mocked the self-proclaimed “Donetsk People's Republic” 
-Some images contained the literary character Sharikov a villain from Mikhail Bulgakov's novel. He was dressed in camouflage with the symbol of the so-called Novorossia (New Russia). There was the Russian military commander Igor Strelkov holding a gun to his head with the Nike catchphrase "Just Do It”.  An image of death with a grenade. There was also a clown.
+
 All the figures were of human height. Imitating a person at their full height. They looked like advertising boards.
+
 It was not something metaphorical, but a direct message.
-I walked around the city and choose places where they could be put. Where there were no surveillance cameras. 
-I planned, here I will park the car, 
-here I will go out through the yard, 
-here I will leave the artwork. 
+
+I walked around the city and choose places where they could be placed. Where there were no surveillance cameras. 
+
+I planned, here I will park the car, here I will go out through the yard, here I will leave the artwork. 
+
 Planning where my friend will take a picture. 
+
 There was a curfew at night. So I decided that it should be in the morning, around five o’clock. 
-We drove around the city and placed two artworks. 
+
+On the first day, we drove around the city and placed two artworks. 
+
 As we drove to the next location, two militants told us to “Stop”. The curfew was still in place…
+
 They asked where we were going, and we said, to work. There were two more artworks in the boot. If they had looked inside, they would have killed us. 
+
 After that, I started putting one artwork at a time with breaks of several days or even weeks.
+
 They would stay up for a couple of hours and then be gone.
+
 I went around and watched the reaction. People laughed and took selfies. They wrote online saying it was a powerful signal that normal people still lived here. 
+
 In total I was kidnapped by militants for a month and a half.
+
 I was kept in basements.
+
 From the first interrogation, I already had broken ribs. And on day one, I experienced the first mock execution.
+
 On the second day, the scenario was the same. I thought that nothing could be worse. 
+
 Another guy was brought to the military headquarters. They stuffed us through the hatch into a military car, where it was impossible for two people to be. It was summer and it was very hot in this iron box. They had such methods of torture.
-Every day there were two mock executions. 
-The most terrible one was when we were picked up at night. They were drinking because one of them had a birthday. And he wanted to shoot a Ukrainian. 
+
 This battalion made money by getting prisoners to cut cars into metal, so they worked us as slaves.
-I was handcuffed to another person. It was very uncomfortable. My left hand was injured and so was the other guy’s. We were bound to each other as twin brothers. We had to pee and eat together.
+
 There was a car which they wanted to paint in camouflage. Someone mentioned that I’m an artist, so they said: “Paint it and we will let you go home.”
+
 I painted it, they gave me five hryvnias and clean clothes and I was free.
-But there was one problem, the Security Service had my passport. Without a passport you can’t go anywhere. So I went with my girlfriend and they said: “Who released you? Take him to the basement.” I stayed there for a month.
+
+But there was one problem, the Security Service had my passport. Without a passport you can’t go anywhere. So I went with my girlfriend and they said: “Who released you? Take him into the basement.” I stayed there for a month.
+
 This time there were no interrogations, no bullying. Our job was to dig trenches but my injuries made this impossible. 
+
 They took me to a place called “Liverpool Hotel” to work in the kitchen, saying “Guys, you’re going to heaven!” We were in a hotel room, we had a shower, and we worked in the kitchen peeling potatoes. I was able to ask for a phone and I contacted my girlfriend who worked in the security forces. She was given the number of some boss. 
+
 Well, such telephone numbers are not given out to strangers. There were no courts. Someone simply asked to release me and finally, they let me go.
+
 I stayed in occupied Donetsk for a while, until I realised that there was nothing there. All I had was 500 hryvnias and I went to Kyiv.
+
 In Kyiv the war seemed far away. 
+
 But on February 24th I woke up and went to the workshop. I looked at all the art and thought… none of this is important.
+
 I just had such a breakdown questioning, what have I been doing all my life? Only the art of killing Muscovites is needed. That’s it. Everything else is not art.
+
 I went to the military headquarters, it is an understandable reaction to these events.
+
 I was sent to territorial defence but there was a long queue. And it was here that I realized that what artists do is also important… and I went back to work. 
+
 
 
 :: instnar6 [nobr]
@@ -1482,3 +1564,4 @@ Some images contained the literary character Sharikov a villain from Mikhail Bul
 There was the Russian military commander Igor Strelkov holding a gun to his head with the Nike catchphrase "Just Do It”.  
 
 There was also an image of death with a grenade and a clown.
+
