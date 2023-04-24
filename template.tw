@@ -735,7 +735,7 @@ setup.backThirty = () => {
 <div class="poster-wrapper" id="poster">
    <img class="poster" src="assets/img/heroes-title.jpeg"/>
  </div>
- <p class="comment center">Put your headphones in and turn up the volume</p>
+
  <div class="menu-wrapper">
     <<button "Keep going">><<goto $nextpass>><</button>>
      <<button "I'm joining the audio tour here">><<goto "framing">><</button>>
@@ -806,7 +806,7 @@ setup.backThirty = () => {
 <</append>><</timed>>
 
 <<timed 8s>><<append "#mount">>
-<p>You can move forward via a button like<<button "This">><<goto $nextpass>><</button>></p> 
+<p>To move forward press a button like <<button "Next">><<goto $nextpass>><</button>></p> 
 <</append>><</timed>>
  
 </main>
@@ -949,7 +949,7 @@ setup.backThirty = () => {
 <main class="instructions">
 <h2>Onboarding</h2>
 <div id="map" class="hide">$map</div>
-<div id="mount"></div>
+<div id="mount" class="onboarding"></div>
 <<timed 0.1s>>
   <<append "#mount">>
     <p>At every location, I will suggest places to sit, to lean, to shelter</p>
@@ -988,12 +988,12 @@ setup.backThirty = () => {
     <span>Step-free access </span>
     </div>
       <div class="multiple-icon-item">
-      <img src="assets/img/wifi.png" >
+      <img src="assets/img/charge.png" >
     <span>Phone Charger  </span>
     </div>
       <div class="multiple-icon-item">
       <img src="assets/img/caution.png" >
-    <span>Caution! take care crossing roads</span>
+    <span>Caution!</span>
     </div>
 </div>
 
@@ -1070,10 +1070,10 @@ setup.backThirty = () => {
   <<set $food to false>>
   <<set $charge to false>>
   <<audio ":all" stop>><<audio "31" play>>
-  <p>Find a place to make yourself comfortable</p>
-  <p>Facing the museum building </p>
-  <p>Maybe lean against one of the large trees </p>
-  <p>Or take a seat on one of the benches</p>
+ <p>Find a place to make yourself comfortable, facing Bluecoat</p>
+<p>Maybe lean against one of the large trees </p>
+<p>Or take a seat on one of the benches</p>
+
     <<button "I'm ready">><<goto $nextpass>><</button>>
 <</if>>
 </main>
@@ -1286,7 +1286,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 <<audio ":all" stop>><<audio "32.5" play>>
 <<include "headerAR">>
 <audio id="audio" >
-  <source src="https://withfireandrageliverpool.com/audio/PC/PD3V1.mp3">
+  <source src="https://withfireandrageliverpool.com/audio/PH/PD3V1.mp3">
 
 </audio>
 <main class="ar">
@@ -1527,7 +1527,7 @@ I was sent to territorial defence but there was a long queue. And it was here th
 <<set $showBackwards to true>>
 <<set $showForwards to true>>
 <<set $showCaptionsIcon to false>>
-<<set $map = setup.generateDirectionsMap(53.4030572538972, -2.969504715141457,53.4030572538972, -2.969504715141457)>>
+<<set $map = setup.generateViewMap({originLat: 53.4082358100555,originLong: -2.981188471362497, originName: "St Georges Quarter Liverpool st Johns Garden Entrance"})>>
 /* <<audio ":all" stop>><<audio "32" play>> */
 <div id="audio"></div>
 
@@ -1560,7 +1560,9 @@ I was sent to territorial defence but there was a long queue. And it was here th
 <<set $transcriptname to  "AR2transcript">>
 <<audio ":all" stop>><<audio "39.5" play>>
 <<include "headerAR">>
-
+<audio id="audio"  >
+  <source src="https://withfireandrageliverpool.com/audio/PH/PD4V1.mp3">
+</audio>
 <main class="ar portrait">
 
   <div class="ar-imgs-container one" id="ARContainer">
@@ -1577,7 +1579,8 @@ I was sent to territorial defence but there was a long queue. And it was here th
 
 </main>
 <<include "footerSer">>
-<<done>><<set $s to setup.startup()>><</done>>
+<<done>><<removeclass "#playpause" "playhighlight">>
+<<set $s to setup.startup(true)>><</done>>
 
 
 :: AR2transcript

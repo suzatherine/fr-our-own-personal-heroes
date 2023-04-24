@@ -761,7 +761,7 @@ setup.backThirty = () => {
 &lt;div class=&quot;poster-wrapper&quot; id=&quot;poster&quot;&gt;
    &lt;img class=&quot;poster&quot; src=&quot;assets/img/heroes-title.jpeg&quot;/&gt;
  &lt;/div&gt;
- &lt;p class=&quot;comment center&quot;&gt;Put your headphones in and turn up the volume&lt;/p&gt;
+
  &lt;div class=&quot;menu-wrapper&quot;&gt;
     &lt;&lt;button &quot;Keep going&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
      &lt;&lt;button &quot;I&#39;m joining the audio tour here&quot;&gt;&gt;&lt;&lt;goto &quot;framing&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -826,7 +826,7 @@ setup.backThirty = () => {
 &lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
 
 &lt;&lt;timed 8s&gt;&gt;&lt;&lt;append &quot;#mount&quot;&gt;&gt;
-&lt;p&gt;You can move forward via a button like&lt;&lt;button &quot;This&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt; 
+&lt;p&gt;To move forward press a button like &lt;&lt;button &quot;Next&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/p&gt; 
 &lt;&lt;/append&gt;&gt;&lt;&lt;/timed&gt;&gt;
  
 &lt;/main&gt;
@@ -956,7 +956,7 @@ setup.backThirty = () => {
 &lt;main class=&quot;instructions&quot;&gt;
 &lt;h2&gt;Onboarding&lt;/h2&gt;
 &lt;div id=&quot;map&quot; class=&quot;hide&quot;&gt;$map&lt;/div&gt;
-&lt;div id=&quot;mount&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;mount&quot; class=&quot;onboarding&quot;&gt;&lt;/div&gt;
 &lt;&lt;timed 0.1s&gt;&gt;
   &lt;&lt;append &quot;#mount&quot;&gt;&gt;
     &lt;p&gt;At every location, I will suggest places to sit, to lean, to shelter&lt;/p&gt;
@@ -995,12 +995,12 @@ setup.backThirty = () => {
     &lt;span&gt;Step-free access &lt;/span&gt;
     &lt;/div&gt;
       &lt;div class=&quot;multiple-icon-item&quot;&gt;
-      &lt;img src=&quot;assets/img/wifi.png&quot; &gt;
+      &lt;img src=&quot;assets/img/charge.png&quot; &gt;
     &lt;span&gt;Phone Charger  &lt;/span&gt;
     &lt;/div&gt;
       &lt;div class=&quot;multiple-icon-item&quot;&gt;
       &lt;img src=&quot;assets/img/caution.png&quot; &gt;
-    &lt;span&gt;Caution! take care crossing roads&lt;/span&gt;
+    &lt;span&gt;Caution!&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1071,10 +1071,10 @@ setup.backThirty = () => {
   &lt;&lt;set $food to false&gt;&gt;
   &lt;&lt;set $charge to false&gt;&gt;
   &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;31&quot; play&gt;&gt;
-  &lt;p&gt;Find a place to make yourself comfortable&lt;/p&gt;
-  &lt;p&gt;Facing the museum building &lt;/p&gt;
-  &lt;p&gt;Maybe lean against one of the large trees &lt;/p&gt;
-  &lt;p&gt;Or take a seat on one of the benches&lt;/p&gt;
+ &lt;p&gt;Find a place to make yourself comfortable, facing Bluecoat&lt;/p&gt;
+&lt;p&gt;Maybe lean against one of the large trees &lt;/p&gt;
+&lt;p&gt;Or take a seat on one of the benches&lt;/p&gt;
+
     &lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;/main&gt;
@@ -1259,7 +1259,7 @@ But photography has the possibility to fuse both aspects, creating a historical 
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;32.5&quot; play&gt;&gt;
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
 &lt;audio id=&quot;audio&quot; &gt;
-  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PC/PD3V1.mp3&quot;&gt;
+  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PH/PD3V1.mp3&quot;&gt;
 
 &lt;/audio&gt;
 &lt;main class=&quot;ar&quot;&gt;
@@ -1472,7 +1472,7 @@ I was sent to territorial defence but there was a long queue. And it was here th
 &lt;&lt;set $showBackwards to true&gt;&gt;
 &lt;&lt;set $showForwards to true&gt;&gt;
 &lt;&lt;set $showCaptionsIcon to false&gt;&gt;
-&lt;&lt;set $map = setup.generateDirectionsMap(53.4030572538972, -2.969504715141457,53.4030572538972, -2.969504715141457)&gt;&gt;
+&lt;&lt;set $map = setup.generateViewMap({originLat: 53.4082358100555,originLong: -2.981188471362497, originName: &quot;St Georges Quarter Liverpool st Johns Garden Entrance&quot;})&gt;&gt;
 /* &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;32&quot; play&gt;&gt; */
 &lt;div id=&quot;audio&quot;&gt;&lt;/div&gt;
 
@@ -1500,7 +1500,9 @@ I was sent to territorial defence but there was a long queue. And it was here th
 &lt;&lt;set $transcriptname to  &quot;AR2transcript&quot;&gt;&gt;
 &lt;&lt;audio &quot;:all&quot; stop&gt;&gt;&lt;&lt;audio &quot;39.5&quot; play&gt;&gt;
 &lt;&lt;include &quot;headerAR&quot;&gt;&gt;
-
+&lt;audio id=&quot;audio&quot;  &gt;
+  &lt;source src=&quot;https://withfireandrageliverpool.com/audio/PH/PD4V1.mp3&quot;&gt;
+&lt;/audio&gt;
 &lt;main class=&quot;ar portrait&quot;&gt;
 
   &lt;div class=&quot;ar-imgs-container one&quot; id=&quot;ARContainer&quot;&gt;
@@ -1517,7 +1519,8 @@ I was sent to territorial defence but there was a long queue. And it was here th
 
 &lt;/main&gt;
 &lt;&lt;include &quot;footerSer&quot;&gt;&gt;
-&lt;&lt;done&gt;&gt;&lt;&lt;set $s to setup.startup()&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="AR2transcript" tags="" position="225,475" size="100,100">&lt;br&gt;
+&lt;&lt;done&gt;&gt;&lt;&lt;removeclass &quot;#playpause&quot; &quot;playhighlight&quot;&gt;&gt;
+&lt;&lt;set $s to setup.startup(true)&gt;&gt;&lt;&lt;/done&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="AR2transcript" tags="" position="225,475" size="100,100">&lt;br&gt;
 &lt;br&gt;
 
 Serhiy Zakharov created street artwork that mocked the self-proclaimed “Donetsk People&#39;s Republic” 
