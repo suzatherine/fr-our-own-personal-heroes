@@ -1061,6 +1061,8 @@ setup.backThirty = () => {
   <p>Enter the building, walk through the cafe and out to the garden</p>
   <p>You should be able to spot our artwork amongst the flowers</p>
   <p>Take a seat wherever you feel comfortable</p>
+   <div class="caution" ><img src="assets/img/charge.png"><p>Ask at frontdesk</p></div>
+         <br>
   <<button "I'm ready">><<goto $nextpass>><</button>>
 <</if>>
 
@@ -1387,7 +1389,7 @@ Here you can see photos from across the many different generations, including fr
   <<replace "#headerinstmount">>  
 <p class="comment">As you begin to walk press  <div class="inline-btn-wrapper">
 <<link "play">>
-  <<timed 4s>>
+  <<timed 15s>>
       <<replace "#headerinstmount">>
     <p class="comment"> Are you at St John’s Garden in St Georges Quarter? 
     <<button "I'm here">><<goto $nextpass>><</button>>

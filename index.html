@@ -1062,6 +1062,8 @@ setup.backThirty = () => {
   &lt;p&gt;Enter the building, walk through the cafe and out to the garden&lt;/p&gt;
   &lt;p&gt;You should be able to spot our artwork amongst the flowers&lt;/p&gt;
   &lt;p&gt;Take a seat wherever you feel comfortable&lt;/p&gt;
+   &lt;div class=&quot;caution&quot; &gt;&lt;img src=&quot;assets/img/charge.png&quot;&gt;&lt;p&gt;Ask at frontdesk&lt;/p&gt;&lt;/div&gt;
+         &lt;br&gt;
   &lt;&lt;button &quot;I&#39;m ready&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
@@ -1344,7 +1346,7 @@ Here you can see photos from across the many different generations, including fr
   &lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;  
 &lt;p class=&quot;comment&quot;&gt;As you begin to walk press  &lt;div class=&quot;inline-btn-wrapper&quot;&gt;
 &lt;&lt;link &quot;play&quot;&gt;&gt;
-  &lt;&lt;timed 4s&gt;&gt;
+  &lt;&lt;timed 15s&gt;&gt;
       &lt;&lt;replace &quot;#headerinstmount&quot;&gt;&gt;
     &lt;p class=&quot;comment&quot;&gt; Are you at St John’s Garden in St Georges Quarter? 
     &lt;&lt;button &quot;I&#39;m here&quot;&gt;&gt;&lt;&lt;goto $nextpass&gt;&gt;&lt;&lt;/button&gt;&gt;
