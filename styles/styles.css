@@ -469,8 +469,7 @@ header.ar > .nav-wrapper > .nav-item > p.comment {
 .ar-imgs-container {
   position: relative;
   width: 100%;
-
-  min-height: 50vh;
+  min-height: 70vh;
 }
 
 main.ar.portrait > .ar-imgs-container {
